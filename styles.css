@@ -1,7 +1,10 @@
  body.ui-overlay-a{
  	margin: 0;
- 	color: white;
- 	background: url("http://www.michalpaszkiewicz.co.uk/MusicSite/background.PNG");
+ }
+ 
+ #main-container{
+  color: white;
+  background: url("http://www.michalpaszkiewicz.co.uk/MusicSite/background.PNG");
  }
  
  #keyboard{

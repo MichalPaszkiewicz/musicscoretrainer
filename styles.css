@@ -1,5 +1,7 @@
  body{
  	margin: 0;
+ 	color: white;
+ 	background: url("https://raw.githubusercontent.com/MichalPaszkiewicz/MusicSite/gh-pages/background.PNG");
  }
  
  #keyboard{
@@ -17,6 +19,7 @@
  .whitekey{
   	height: 100%;
   	width: 13%;
+  	background: white;
   	border: 1px black solid;
   	border-left: none;
  }

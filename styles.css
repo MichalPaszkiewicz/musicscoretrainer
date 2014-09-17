@@ -1,3 +1,7 @@
+ body{
+ 	margin: 0;
+ }
+ 
  #keyboard{
  	height: 100px;
  	width: 100%;
@@ -12,8 +16,9 @@
   	height: 100%;
   	width: 14%;
   	border: 1px black solid;
+  	border-left: none;
  }
  
  .blackkey{
-  
+ 
  }

@@ -1,7 +1,6 @@
- body.ui-overlay-a, body{
+ body.ui-overlay-a{
  	margin: 0;
  	color: white;
- 	background-color: none;
  	background: url("http://www.michalpaszkiewicz.co.uk/MusicSite/background.PNG");
  }
  

@@ -5,6 +5,7 @@
  #keyboard{
  	height: 200px;
  	width: 100%;
+ 	position: relative;
  }
  
  .whitekey, .blackkey{
@@ -25,5 +26,5 @@
  }
  
  .blackkey{
- 
+  position: fixed;
  }

@@ -3,8 +3,10 @@
  }
  
  #main-container{
-  color: white;
-  background: url("http://www.michalpaszkiewicz.co.uk/MusicSite/background.PNG");
+ 	height: 100%;
+ 	width: 100%;
+ 	color: white;
+ 	background: url("http://www.michalpaszkiewicz.co.uk/MusicSite/background.PNG");
  }
  
  #keyboard{
@@ -32,5 +34,5 @@
  }
  
  .blackkey{
-  position: fixed;
+ 	position: fixed;
  }

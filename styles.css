@@ -19,6 +19,10 @@
   	border-left: none;
  }
  
+ .whitekey:hover{
+ 	background: rgb(245,245,245);
+ }
+ 
  .blackkey{
  
  }

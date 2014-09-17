@@ -3,10 +3,13 @@
  	width: 100%;
  }
  
+ .whitekey, .blackkey{
+ 	display: inline-block;
+ }
+ 
  .whitekey{
   	height: 100%;
   	width: 14%;
-  	display: inline-block;
  }
  
  .blackkey{

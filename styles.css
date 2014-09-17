@@ -10,6 +10,7 @@
  .whitekey{
   	height: 100%;
   	width: 14%;
+  	border: 1px black solid;
  }
  
  .blackkey{

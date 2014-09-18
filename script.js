@@ -75,7 +75,7 @@ function updateLiveNotes()
 {
 	for(var i = 0; i < liveNotes.length; i++)
 	{
-		liveNotes[i].x -= canvas.width / 900;
+		liveNotes[i].x -= canvas.width / 800;
 	}
 	
 	if(liveNotes.length > 0 && liveNotes[0].x <= 10)

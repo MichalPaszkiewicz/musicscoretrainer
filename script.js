@@ -45,6 +45,8 @@ function drawLiveNotes()
 	}
 }
 
+drawLiveNotes();
+
 //drawNote(ctx, startPos, notes.a.y);
 //drawNote(ctx, startPos - 100, notes.g.y);
 //drawNote(ctx, startPos - 200, notes.d.y);

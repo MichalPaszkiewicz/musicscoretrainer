@@ -7,7 +7,7 @@
  }
  
  #main-container{
- 	height: 100%;
+ 	min-height: 100%;
  	width: 100%;
  	color: white;
  	background: url("http://www.michalpaszkiewicz.co.uk/MusicSite/background.PNG");
@@ -60,4 +60,8 @@
 
 .clearfix{
 	clear:both;
+}
+
+.push{
+	height: 200px;
 }

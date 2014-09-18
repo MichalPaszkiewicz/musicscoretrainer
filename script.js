@@ -20,12 +20,16 @@ notes.b = {y : "48"};
 notes.a = {y : "55"};
 notes.octave = {y : "49"};
 
+var liveNotes = [];
+liveNotes.push({x : startPos, note : "a"});
+liveNotes.push({x : startPos - 100, note : "g"});
+liveNotes.push({x : startPos - 200, note : "d"});
 
 $(".game-container").html("<canvas id='canvas' height=100 width=" + $(this).innerWidth() + "></canvas>");
 var ctx = document.getElementById('canvas').getContext('2d');
 ctx.globalAlpha = 0.9;
 
-function note(ctx, x, y)
+function drawNote(ctx, x, y)
 {
 	ctx.beginPath();
 	ctx.fillStyle="black";
@@ -33,6 +37,14 @@ function note(ctx, x, y)
 	ctx.fill();
 }
 
-note(ctx, startPos, notes.a.y);
-note(ctx, startPos - 100, notes.g.y);
-note(ctx, startPos - 200, notes.d.y);
+function drawLiveNotes()
+{
+	for(var i = 0; i < liveNotes.length; i++)
+	{
+		drawNote(ctx, liveNotes[i].startPos, notes[liveNotes[i].note].y);
+	}
+}
+
+//drawNote(ctx, startPos, notes.a.y);
+//drawNote(ctx, startPos - 100, notes.g.y);
+//drawNote(ctx, startPos - 200, notes.d.y);

@@ -31,6 +31,7 @@
   	background: white;
   	border: 1px black solid;
   	border-left: none;
+  	z-index: 100;
  }
  
  .whitekey:hover{

@@ -1,14 +1,47 @@
- #keyboard{
- 	height: 100px;
+ body.ui-overlay-a{
+ 	margin: 0;
+ }
+ 
+ .ui-page.ui-page-theme-a.ui-page-active{
+ 	height: 100%;
+ }
+ 
+ #main-container{
+ 	height: 100%;
  	width: 100%;
+ 	color: white;
+ 	background: url("http://www.michalpaszkiewicz.co.uk/MusicSite/background.PNG");
+ } 
+ 
+ #keyboard{
+ 	height: 200px;
+ 	width: 100%;
+ 	position: relative;
+ }
+ 
+ .whitekey, .blackkey{
+ 	display: inline-block;
+ 	float: left;
+ 	cursor: pointer;
  }
  
  .whitekey{
   	height: 100%;
-  	width: 14%;
-  	display: inline-block;
+  	width: 13%;
+  	background: white;
+  	border: 1px black solid;
+  	border-left: none;
+  	z-index: 100;
+ }
+ 
+ .whitekey:hover{
+ 	background: rgb(240,240,240);
  }
  
  .blackkey{
-  
+ 	height: 50%;
+	width: 9%;
+	z-index: 1000;
+	margin-left: -4.5%;
+	background: black;
  }

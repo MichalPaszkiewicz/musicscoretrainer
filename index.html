@@ -1,23 +1,25 @@
 <html>
 	<head>
-		<script src="jquery.mobile-1.4.4.min.js"></script>
-		<script src="script.js"></script>
+		<meta name="description" content="Learn to read music score with these awesome games!">
+		<meta name="viewport" content="width=600, initial-scale=0.5">
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css" />
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="styles.css">
 	</head>
 	<body>
-		<div id="keyboard">
-			<div class="whitekey" id="c"></div>
-			<div class="blackkey" id="c#"></div>
-			<div class="whitekey" id="d"></div>
-			<div class="blackkey" id="d#"></div>
-			<div class="whitekey" id="e"></div>
-			<div class="whitekey" id="f"></div>
-			<div class="blackkey" id="f#"></div>
-			<div class="whitekey" id="g"></div>
-			<div class="blackkey" id="g#"></div>
-			<div class="whitekey" id="a"></div>
-			<div class="blackkey" id="a#"></div>
-			<div class="whitekey" id="b"></div>
+		<div id="main-container">
+			<canvas id="game-canvas"></canvas>
+			<div id="keyboard">
+				<div class="whitekey key" id="c"></div><div class="blackkey key" id="c#"></div>
+				<div class="whitekey key" id="d"></div><div class="blackkey key" id="d#"></div>
+				<div class="whitekey key" id="e"></div>
+				<div class="whitekey key" id="f"></div><div class="blackkey key" id="f#"></div>
+				<div class="whitekey key" id="g"></div><div class="blackkey key" id="g#"></div>
+				<div class="whitekey key" id="a"></div><div class="blackkey key" id="a#"></div>
+				<div class="whitekey key" id="b"></div>
+			</div>
 		</div>
+		<script src="script.js"></script>
 	</body>
 </html>

@@ -57,3 +57,7 @@
 	height: 200px;
 	background: rgb(255, 251, 233);
 }
+
+.clearfix{
+	clear:both;
+}

@@ -56,6 +56,11 @@ function updateLiveNotes()
 	{
 		liveNotes[i].x -= canvas.width / 900;
 	}
+	
+	if(liveNotes[0].x <= 10)
+	{
+		liveNotes.shift();
+	}
 }
 
 function runGame()

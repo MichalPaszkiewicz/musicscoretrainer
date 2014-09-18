@@ -55,7 +55,7 @@
 .game-container{
 	width: 100%;
 	height: 100px;
-	background: url("background.PNG");// rgb(255, 251, 233);
+	background: url("gamebackground.png");// rgb(255, 251, 233);
 }
 
 .clearfix{

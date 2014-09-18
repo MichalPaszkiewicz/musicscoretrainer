@@ -1,6 +1,6 @@
  $("#keyboard .key").click(function(){ console.log(this.id); })
 
-var startPos = 1000;
+var startPos = 300;
 
 var notes = function(value){
 	return this[value];

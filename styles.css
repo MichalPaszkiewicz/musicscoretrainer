@@ -38,8 +38,8 @@
  }
  
  .blackkey{
- 	position: fixed;
- 	height: 100px;
+ 	//position: fixed;
+ 	height: 50%;
 	width: 9%;
 	z-index: 1000;
 	margin-left: -4.5%;

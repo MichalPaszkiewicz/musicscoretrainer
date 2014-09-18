@@ -57,7 +57,7 @@ function updateLiveNotes()
 		liveNotes[i].x -= canvas.width / 900;
 	}
 	
-	if(liveNotes.length > -1 && liveNotes[0].x <= 100)
+	if(liveNotes.length > 0 && liveNotes[0].x <= 100)
 	{
 		liveNotes.shift();
 	}

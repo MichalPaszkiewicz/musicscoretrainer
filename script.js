@@ -37,8 +37,6 @@ notes.octave = {y : "49"};
 
 var liveNotes = [];
 liveNotes.push({x : startPos, note : "a"});
-liveNotes.push({x : startPos + 100, note : "g"});
-liveNotes.push({x : startPos + 200, note : "d"});
 
 function addNote(note)
 {

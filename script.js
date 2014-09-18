@@ -1,4 +1,9 @@
- $("#keyboard .key").click(function(){ console.log(this.id); })
+ $("#keyboard .key").click(function(){ playKey(this.id); })
+
+function playKey(key)
+{
+	console.log(key);
+}
 
 var startPos = 300;
 

@@ -29,6 +29,11 @@ liveNotes.push({x : startPos, note : "a"});
 liveNotes.push({x : startPos + 100, note : "g"});
 liveNotes.push({x : startPos + 200, note : "d"});
 
+function addNote(note)
+{
+	liveNotes.push({x : startPos, note : note});
+}
+
 function clearCanvas()
 {
 	ctx.clearRect(0,0,canvas.width,canvas.height);
@@ -71,3 +76,5 @@ function runGame()
 		drawLiveNotes();
 	}, 10)
 }
+
+runGame();

@@ -25,3 +25,4 @@ function note(ctx, x, y)
 
 note(ctx, startPos, notes.a.y);
 note(ctx, startPos - 100, notes.g.y);
+note(ctx, startPos - 200, notes.d.y);

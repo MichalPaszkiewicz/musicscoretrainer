@@ -1,4 +1,4 @@
-var noteCountDownInit = 500;
+var noteCountDownInit = 300;
 var noteCountDown = noteCountDownInit;
  
  $("#keyboard .key").click(function(){ playKey(this.id); })

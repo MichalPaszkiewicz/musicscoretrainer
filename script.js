@@ -1,11 +1,15 @@
  $("#keyboard .key").click(function(){ playKey(this.id); })
 
+$(".game-container").html("<canvas id='canvas' height=100 width=" + $(this).innerWidth() + "></canvas>");
+var ctx = document.getElementById('canvas').getContext('2d');
+ctx.globalAlpha = 0.9;
+
 function playKey(key)
 {
 	console.log(key);
 }
 
-var startPos = 300;
+var startPos = canvas.width;
 
 var notes = function(value){
 	return this[value];
@@ -24,10 +28,6 @@ var liveNotes = [];
 liveNotes.push({x : startPos, note : "a"});
 liveNotes.push({x : startPos - 100, note : "g"});
 liveNotes.push({x : startPos - 200, note : "d"});
-
-$(".game-container").html("<canvas id='canvas' height=100 width=" + $(this).innerWidth() + "></canvas>");
-var ctx = document.getElementById('canvas').getContext('2d');
-ctx.globalAlpha = 0.9;
 
 function clearCanvas()
 {
@@ -54,7 +54,7 @@ function updateLiveNotes()
 {
 	for(var i = 0; i < liveNotes.length; i++)
 	{
-		liveNotes[i].x--;
+		liveNotes[i].x -= canvas.width / 100;
 	}
 }
 

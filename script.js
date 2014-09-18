@@ -14,11 +14,9 @@ var ctx = document.getElementById('canvas').getContext('2d');
 
 function note(ctx, x, y)
 {
-	ctx.fillStyle="red";
-	ctx.strokeStyle = "black";
+	ctx.fillStyle="black";
 	ctx.arc(x, y, 6, 0, 2 * Math.PI, false);
 	ctx.fill();
-	ctx.stroke();
 }
 
 note(ctx, startPos, notes.a.y);

@@ -29,6 +29,11 @@ $(".game-container").html("<canvas id='canvas' height=100 width=" + $(this).inne
 var ctx = document.getElementById('canvas').getContext('2d');
 ctx.globalAlpha = 0.9;
 
+function clearCanvas()
+{
+	ctx.clearRect(0,0,canvas.width,canvas.height);
+}
+
 function drawNote(ctx, x, y)
 {
 	ctx.beginPath();
@@ -45,8 +50,19 @@ function drawLiveNotes()
 	}
 }
 
-drawLiveNotes();
+function updateLiveNotes()
+{
+	for(var i = 0; i < liveNotes.length; i++)
+	{
+		liveNotes[i].x--;
+	}
+}
 
-//drawNote(ctx, startPos, notes.a.y);
-//drawNote(ctx, startPos - 100, notes.g.y);
-//drawNote(ctx, startPos - 200, notes.d.y);
+function runGame()
+{
+	setInterval(function(){
+		updateLiveNotes();
+		clearCanvas();
+		drawLiveNotes();
+	}, 50)
+}

@@ -39,7 +39,8 @@
  }
  
  .blackkey{
- 	height: 50%;
+ 	position: fixed;
+ 	height: 100px;
 	width: 9%;
 	z-index: 1000;
 	margin-left: -4.5%;

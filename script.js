@@ -7,7 +7,7 @@ var notes = function(value){
 };
 
 notes.a = {y : "55"};
-notes.b = {y : "60"};
+notes.b = {y : "61"};
 
 $(".game-container").html("<canvas id='canvas' height=100 width=" + $(this).innerWidth() + "></canvas>");
 var ctx = document.getElementById('canvas').getContext('2d');

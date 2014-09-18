@@ -54,7 +54,7 @@ function updateLiveNotes()
 {
 	for(var i = 0; i < liveNotes.length; i++)
 	{
-		liveNotes[i].x -= canvas.width / 100;
+		liveNotes[i].x -= canvas.width / 400;
 	}
 }
 
@@ -64,5 +64,5 @@ function runGame()
 		updateLiveNotes();
 		clearCanvas();
 		drawLiveNotes();
-	}, 50)
+	}, 20)
 }

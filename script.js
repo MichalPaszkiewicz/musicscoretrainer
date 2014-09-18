@@ -9,6 +9,10 @@ ctx.globalAlpha = 0.9;
 
 function playKey(key)
 {
+	if(key == liveNotes[0].note)
+	{
+		liveNotes.shift();
+	}
 	console.log(key);
 }
 

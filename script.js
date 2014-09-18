@@ -1,5 +1,8 @@
 var noteCountDownInit = 300;
 var noteCountDown = noteCountDownInit;
+
+var score = 0;
+var missedNotes = 0;
  
  $("#keyboard .key").click(function(){ playKey(this.id); })
 
@@ -12,8 +15,9 @@ function playKey(key)
 	if(key == liveNotes[0].note)
 	{
 		liveNotes.shift();
+		score++;
 	}
-	console.log(key);
+	//console.log(key);
 }
 
 var startPos = canvas.width;
@@ -78,6 +82,7 @@ function updateLiveNotes()
 	
 	if(liveNotes.length > 0 && liveNotes[0].x <= 10)
 	{
+		missedNotes++;
 		liveNotes.shift();
 	}
 	

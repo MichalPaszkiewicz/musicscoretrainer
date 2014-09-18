@@ -15,9 +15,11 @@ notes.g = {y : "62"};
 
 $(".game-container").html("<canvas id='canvas' height=100 width=" + $(this).innerWidth() + "></canvas>");
 var ctx = document.getElementById('canvas').getContext('2d');
+ctx.globalAlpha = 0.1;
 
 function note(ctx, x, y)
 {
+	ctx.beginPath();
 	ctx.fillStyle="black";
 	ctx.arc(x, y, 6, 0, 2 * Math.PI, false);
 	ctx.fill();

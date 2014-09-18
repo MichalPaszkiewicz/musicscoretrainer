@@ -54,7 +54,7 @@
 
 .game-container{
 	width: 100%;
-	height: 200px;
+	height: 100px;
 	background: rgb(255, 251, 233);
 }
 
@@ -63,5 +63,5 @@
 }
 
 .push{
-	height: 200px;
+	//height: 200px;
 }

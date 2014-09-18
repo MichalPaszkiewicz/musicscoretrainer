@@ -41,7 +41,7 @@ function drawLiveNotes()
 {
 	for(var i = 0; i < liveNotes.length; i++)
 	{
-		drawNote(ctx, liveNotes[i].startPos, notes[liveNotes[i].note].y);
+		drawNote(ctx, liveNotes[i].x, notes[liveNotes[i].note].y);
 	}
 }
 

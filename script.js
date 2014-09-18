@@ -1,4 +1,4 @@
-var noteCountDownInit = 300;
+var noteCountDownInit = 200;
 var noteCountDown = noteCountDownInit;
 
 var score = 0;

@@ -6,11 +6,14 @@ var notes = function(value){
 	return this[value];
 };
 
+notes.g = {y : "13"};
+notes.f = {y : "20"};
+notes.e = {y : "27"};
 notes.d = {y : "34"};
 notes.c = {y : "41"};
 notes.b = {y : "48"};
 notes.a = {y : "55"};
-notes.g = {y : "62"};
+notes.octave = {y : "49"};
 
 
 $(".game-container").html("<canvas id='canvas' height=100 width=" + $(this).innerWidth() + "></canvas>");

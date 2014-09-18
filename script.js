@@ -1,3 +1,6 @@
+var noteCountDownInit = 500;
+var noteCountDown = noteCountDownInit;
+ 
  $("#keyboard .key").click(function(){ playKey(this.id); })
 
 $(".game-container").html("<canvas id='canvas' height=100 width=" + $(this).innerWidth() + "></canvas>");
@@ -34,6 +37,13 @@ function addNote(note)
 	liveNotes.push({x : startPos, note : note});
 }
 
+function addRandomNote()
+{
+	var number = Math.floor( 7 * Math.random() );
+	var letter = String.fromCharCode(number + 97);
+	addNote(letter);
+}
+
 function clearCanvas()
 {
 	ctx.clearRect(0,0,canvas.width,canvas.height);
@@ -65,6 +75,15 @@ function updateLiveNotes()
 	if(liveNotes.length > 0 && liveNotes[0].x <= 100)
 	{
 		liveNotes.shift();
+	}
+	
+	noteCountDown--;
+	
+	if(noteCountDown == 0)
+	{
+		addRandomNote();
+		
+		noteCountDown = noteCountDownInit;
 	}
 }
 

@@ -12,7 +12,7 @@ $(".game-container").html("<canvas id='canvas' height=100 width=" + $(this).inne
 var ctx = document.getElementById('canvas').getContext('2d');
 ctx.globalAlpha = 0.9;
 
-displayLevel()
+function displayLevel()
 {
 	var level = getLevel();
 	$(".level").text(level);

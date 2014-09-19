@@ -64,6 +64,16 @@ function showKeyNames()
 	}
 }
 
+function showBlackKeyNames()
+{
+	var uiNotes = $(".blackkey");
+	for(var i = 0; i < uiNotes.length; i++)
+	{
+		console.log(uiNotes[i].id);
+		$(uiNotes[i]).html(uiNotes[i].id.toUpperCase());
+	}
+}
+
 function hideKeyNames()
 {
 	$(".key").text("");
@@ -190,6 +200,10 @@ function runGame()
 	if(level <= 5)
 	{
 		showKeyNames();
+	}
+	else if(level <= 10)
+	{
+		showBlackKeyNames();
 	}
 	else
 	{

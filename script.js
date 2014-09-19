@@ -31,6 +31,10 @@ function playKey(key)
 	{
 		liveNotes.shift();
 		score++;
+		
+		var totalNotes = score + missedNotes;
+		
+		$(".scoreBoard").text("Score: " + score + "/" + totalNotes);
 	}
 	//console.log(key);
 }

@@ -2,6 +2,10 @@
  	margin: 0;
  }
  
+ .hidden{
+ 	display: none;
+ }
+ 
  .ui-page.ui-page-theme-a.ui-page-active{
  	height: 100%;
  }

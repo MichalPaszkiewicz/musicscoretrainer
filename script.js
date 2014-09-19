@@ -27,6 +27,12 @@ function toggleMenu()
 	$(".settings-container").toggleClass("hidden");
 }
 
+function resetScore()
+{
+	score = 0;
+	missedNotes = 0;
+}
+
 function hideKeyNames()
 {
 	$(".key").text("");
@@ -148,4 +154,5 @@ function stopGame()
 {
 	clearInterval(timer);
 	clearCanvas();
+	resetScore();
 }

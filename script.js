@@ -177,10 +177,7 @@ function updateLiveNotes()
 		liveNotes.shift();
 	}
 	
-	if(noteCountDown > 10)
-	{
-		noteCountDown--;
-	}
+	noteCountDown--;
 	
 	if(noteCountDown == 0)
 	{
@@ -188,7 +185,10 @@ function updateLiveNotes()
 		
 		noteCountDown = noteCountDownInit;
 		
-		noteCountDownInit--;
+		if(noteCountDownInit > 10)
+		{
+			noteCountDownInit--;
+		}
 		
 		updateScore();
 	}

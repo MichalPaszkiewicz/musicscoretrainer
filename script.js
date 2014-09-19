@@ -217,14 +217,14 @@ function runGame()
 	
 	noteCountDownInit = Math.max(50, noteCountDownInit - (level - 1) );
 
-	if(level >= 40)
+	if(level >= 80)
 	{
 		updateRate = 5;
-		canvasSpeed = Math.max(400, (2 * canvasSpeed) - (800 + (level - 41)));
+		canvasSpeed = Math.max(400, (2 * canvasSpeed) - (800 + (level - 40)));
 	}
 	else
 	{
-		canvasSpeed = Math.max(200, canvasSpeed - (level - 1) * 10);
+		canvasSpeed = Math.max(200, canvasSpeed - (level - 1) * 5);
 	}
 	
 	timer = setInterval(function(){

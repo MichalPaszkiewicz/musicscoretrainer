@@ -83,9 +83,6 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-	background: white;
-	z-index: 100000;
-	opacity: 0.9;
 	height: 100%;
 	width: 100%;
 }
@@ -105,6 +102,15 @@
 	box-shadow: 0 0 14px 0px black;
 	padding: 10px;
 	color: white;
+	z-index: 200000;
+}
+
+.settings-cover{
+	background: white;
+	z-index: 100000;
+	opacity: 0.9;
+	height: 100%;
+	width: 100%;
 }
 
 .level{

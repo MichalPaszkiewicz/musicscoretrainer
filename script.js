@@ -40,7 +40,7 @@ function setLevel()
 
 	if(score == 20)
 	{
-		localStorage.setItem("musicscoretrainer-level", level + 1)
+		localStorage.setItem("musicscoretrainer-level", parseInt(level) + 1)
 	}
 	
 	displayLevel();

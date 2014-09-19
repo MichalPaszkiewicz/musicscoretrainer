@@ -155,4 +155,5 @@ function stopGame()
 	clearInterval(timer);
 	clearCanvas();
 	resetScore();
+	updateScore();
 }

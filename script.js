@@ -88,6 +88,8 @@ function resetScore()
 {
 	score = 0;
 	missedNotes = 0;
+	liveNotes = [];
+	addRandomNote();
 }
 
 function updateScore()
@@ -129,7 +131,7 @@ notes.a = {y : "55"};
 notes.octave = {y : "49"};
 
 var liveNotes = [];
-liveNotes.push({x : startPos, note : "a"});
+addRandomNote();
 
 function addNote(note)
 {

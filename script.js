@@ -56,6 +56,11 @@ function showKeyNames()
 	}
 }
 
+function hideKeyNames()
+{
+	$(".key").text("");
+}
+
 function toggleMenu()
 {
 	$(".settings-container").toggleClass("hidden");
@@ -65,11 +70,6 @@ function resetScore()
 {
 	score = 0;
 	missedNotes = 0;
-}
-
-function hideKeyNames()
-{
-	$(".key").text("");
 }
 
 function updateScore()
@@ -178,6 +178,15 @@ var timer = function(){};
 function runGame()
 {
 	var level = getLevel();
+	
+	if(level <= 5)
+	{
+		showKeyNames();
+	}
+	else
+	{
+		hideKeyNames();
+	}
 	
 	noteCountDownInit = Math.max(10, noteCountDownInit - (level - 1) * 5 );
 	canvasSpeed = Math.max(200, canvasSpeed - (level - 1) * 10);

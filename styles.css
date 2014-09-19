@@ -26,6 +26,7 @@
  .whitekey, .blackkey{
  	display: inline-block;
  	cursor: pointer;
+ 	border-radius: 0 0 10px 10px;
  }
  
  .whitekey{

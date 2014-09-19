@@ -178,8 +178,9 @@ var timer = function(){};
 function runGame()
 {
 	var level = getLevel();
-	noteCountDownInit -= (level - 1) * 5;
-	canvasSpeed -= (level - 1) * 10;
+	
+	noteCountDownInit = Math.max(10, noteCountDownInit - (level - 1) * 5 );
+	canvasSpeed = Math.max(200, canvasSpeed - (level - 1) * 10);
 	
 	timer = setInterval(function(){
 		updateLiveNotes();

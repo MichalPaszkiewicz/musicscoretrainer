@@ -57,11 +57,12 @@
 	font-size: 20px;
 	text-align: center;
 	line-height: 100px;
+	box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.6);
  }
 
 .blackkey:hover{
 	background: rgb(70, 70, 70);
-	
+	box-shadow: none;
 }
 
 .game-container{

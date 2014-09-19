@@ -187,7 +187,7 @@ function updateLiveNotes()
 		
 		noteCountDown = noteCountDownInit;
 		
-		if(noteCountDownInit > 10)
+		if(noteCountDownInit > 20)
 		{
 			noteCountDownInit--;
 		}
@@ -220,7 +220,7 @@ function runGame()
 	if(level >= 40)
 	{
 		updateRate = 5;
-		canvasSpeed = Math.max(400, (2 * canvasSpeed) - (800 + (level - 41) * 2));
+		canvasSpeed = Math.max(400, (2 * canvasSpeed) - (800 + (level - 41)));
 	}
 	else
 	{

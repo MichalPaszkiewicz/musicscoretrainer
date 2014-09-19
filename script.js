@@ -215,7 +215,7 @@ function runGame()
 		hideKeyNames();
 	}
 	
-	noteCountDownInit = Math.max(50, noteCountDownInit - (level - 1) * 5 );
+	noteCountDownInit = Math.max(50, noteCountDownInit - (level - 1) * 2 );
 
 	if(level >= 40)
 	{

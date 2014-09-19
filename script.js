@@ -23,7 +23,7 @@ displayLevel();
 function factoryReset(){
 	if(confirm("Are you sure you want to reset this game and go back to level 1?"))
 	{
-		localStorage.setItem("musicscoretrainer-level", 0);
+		localStorage.setItem("musicscoretrainer-level", 1);
 		setLevel();
 	}
 }

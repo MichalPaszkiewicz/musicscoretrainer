@@ -10,6 +10,21 @@ $(".game-container").html("<canvas id='canvas' height=100 width=" + $(this).inne
 var ctx = document.getElementById('canvas').getContext('2d');
 ctx.globalAlpha = 0.9;
 
+function showNoteNames()
+{
+	var uiNotes = $(".key");
+	for(var i = 0; i < uiNotes.length; i++)
+	{
+		console.log(uiNotes[i].id);
+		$(uiNotes[i]).html(uiNotes[i].id.toUpperCase());
+	}
+}
+
+function hideNoteNames()
+{
+	$(".key").text("");
+}
+
 function playKey(key)
 {
 	if(key == liveNotes[0].note)

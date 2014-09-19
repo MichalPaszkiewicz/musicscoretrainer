@@ -36,6 +36,10 @@
   	border: 1px black solid;
   	border-left: none;
   	z-index: 100;
+  	color: black;
+	font-size: 40px;
+	text-align: center;
+	line-height: 180px;
  }
  
  .whitekey:hover{
@@ -49,6 +53,10 @@
 	z-index: 1000;
 	margin-left: -4.5%;
 	background: black;
+	color: white;
+	font-size: 40px;
+	text-align: center;
+	line-height: 100px;
  }
 
 .blackkey:hover{

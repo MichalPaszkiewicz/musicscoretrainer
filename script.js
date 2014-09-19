@@ -4,7 +4,7 @@ var canvasSpeed = 800;
 
 var score = 0;
 var missedNotes = 0;
-
+var updateRate = 10;
  
  $("#keyboard .key").click(function(){ playKey(this.id); })
 
@@ -211,13 +211,22 @@ function runGame()
 	}
 	
 	noteCountDownInit = Math.max(10, noteCountDownInit - (level - 1) * 5 );
-	canvasSpeed = Math.max(200, canvasSpeed - (level - 1) * 10);
+
+	if(level >= 40)
+	{
+		updateRate = 5;
+		canvasSpeed = Math.max(400, (2 * canvasSpeed) - (800 + (level - 41) * 10));
+	}
+	else
+	{
+		canvasSpeed = Math.max(200, canvasSpeed - (level - 1) * 10);
+	}
 	
 	timer = setInterval(function(){
 		updateLiveNotes();
 		clearCanvas();
 		drawLiveNotes();
-	}, 10)
+	}, updateRate)
 }
 
 function stopGame()

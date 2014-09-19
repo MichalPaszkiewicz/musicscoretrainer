@@ -125,9 +125,11 @@ function updateLiveNotes()
 	}
 }
 
+var timer = function(){};
+
 function runGame()
 {
-	setInterval(function(){
+	timer = setInterval(function(){
 		updateLiveNotes();
 		clearCanvas();
 		drawLiveNotes();

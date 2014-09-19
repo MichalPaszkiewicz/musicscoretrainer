@@ -25,7 +25,6 @@
  
  .whitekey, .blackkey{
  	display: inline-block;
- 	float: left;
  	cursor: pointer;
  }
  

@@ -20,6 +20,11 @@ function showKeyNames()
 	}
 }
 
+function toggleMenu()
+{
+	$(".settings-container").toggleClass("hidden");
+}
+
 function hideKeyNames()
 {
 	$(".key").text("");
@@ -123,5 +128,3 @@ function runGame()
 		drawLiveNotes();
 	}, 10)
 }
-
-runGame();

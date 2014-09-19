@@ -10,7 +10,7 @@ $(".game-container").html("<canvas id='canvas' height=100 width=" + $(this).inne
 var ctx = document.getElementById('canvas').getContext('2d');
 ctx.globalAlpha = 0.9;
 
-function showNoteNames()
+function showKeyNames()
 {
 	var uiNotes = $(".key");
 	for(var i = 0; i < uiNotes.length; i++)
@@ -20,7 +20,7 @@ function showNoteNames()
 	}
 }
 
-function hideNoteNames()
+function hideKeyNames()
 {
 	$(".key").text("");
 }

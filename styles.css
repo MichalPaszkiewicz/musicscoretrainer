@@ -102,6 +102,7 @@
 	margin: auto;
 	border-radius: 10px;
 	box-shadow: 0 0 14px 0px black;
+	padding: 10px;
 }
 
 .clearfix{

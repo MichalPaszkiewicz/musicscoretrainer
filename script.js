@@ -215,6 +215,7 @@ function runGame()
 		hideKeyNames();
 	}
 	
+	noteCountDownInit = 200;
 	noteCountDownInit = Math.max(50, noteCountDownInit - (level - 1) );
 
 	if(level >= 80)

@@ -208,6 +208,7 @@ function runGame()
 	}
 	else if(level <= 10)
 	{
+		hideKeyNames();
 		showBlackKeyNames();
 	}
 	else

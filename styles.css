@@ -37,7 +37,7 @@
   	border-left: none;
   	z-index: 100;
   	color: black;
-	font-size: 40px;
+	font-size: 20px;
 	text-align: center;
 	line-height: 180px;
  }
@@ -54,7 +54,7 @@
 	margin-left: -4.5%;
 	background: black;
 	color: white;
-	font-size: 40px;
+	font-size: 20px;
 	text-align: center;
 	line-height: 100px;
  }

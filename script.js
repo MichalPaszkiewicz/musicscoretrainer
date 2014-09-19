@@ -20,6 +20,14 @@ function displayLevel()
 
 displayLevel();
 
+function factoryReset(){
+	if(confirm("Are you sure you want to reset this game and go back to level 1?"))
+	{
+		localStorage.setItem("musicscoretrainer-level", 0);
+		setLevel();
+	}
+}
+
 function getLevel()
 {
 	var level = localStorage.getItem("musicscoretrainer-level");
@@ -38,7 +46,7 @@ function setLevel()
 {
 	var level = getLevel();
 
-	if(score == 20)
+	if(score == 30)
 	{
 		localStorage.setItem("musicscoretrainer-level", parseInt(level) + 1)
 	}
@@ -77,7 +85,7 @@ function updateScore()
 	var totalNotes = score + missedNotes;
 	$(".scoreBoard").text("Score: " + score + "/" + totalNotes);
 	
-	if(totalNotes == 20)
+	if(totalNotes == 30)
 	{
 		stopGame();
 		toggleMenu();

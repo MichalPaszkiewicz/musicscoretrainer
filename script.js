@@ -12,6 +12,40 @@ $(".game-container").html("<canvas id='canvas' height=100 width=" + $(this).inne
 var ctx = document.getElementById('canvas').getContext('2d');
 ctx.globalAlpha = 0.9;
 
+displayLevel()
+{
+	var level = getLevel();
+	$(".level").text(level);
+}
+
+displayLevel();
+
+function getLevel()
+{
+	var level = localStorage.getItem("musicscoretrainer-level");
+
+	if(level == null)
+	{
+		localStorage.setItem("musicscoretrainer-level",1);
+		return 1;
+	}
+	else{
+		return level;
+	}
+}
+
+function setLevel()
+{
+	var level = getLevel();
+
+	if(score == 20)
+	{
+		localStorage.setItem("musicscoretrainer-level", level + 1)
+	}
+	
+	displayLevel();
+}
+
 function showKeyNames()
 {
 	var uiNotes = $(".key");
@@ -143,6 +177,10 @@ var timer = function(){};
 
 function runGame()
 {
+	var level = getLevel();
+	noteCountDownInit -= (level - 1) * 5;
+	canvasSpeed -= (level - 1) * 10;
+	
 	timer = setInterval(function(){
 		updateLiveNotes();
 		clearCanvas();
@@ -152,6 +190,7 @@ function runGame()
 
 function stopGame()
 {
+	setLevel();
 	clearInterval(timer);
 	clearCanvas();
 	resetScore();

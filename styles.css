@@ -74,7 +74,8 @@
 .scoreBoard{
 	position: absolute;
 	top: 20px;
-	font-size: 70px;
+	font-size: 53px;
+	margin-top: 17px;
 	opacity: 0.2;
 }
 

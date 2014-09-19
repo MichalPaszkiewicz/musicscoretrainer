@@ -135,3 +135,9 @@ function runGame()
 		drawLiveNotes();
 	}, 10)
 }
+
+function stopGame()
+{
+	clearInterval(timer);
+	clearCanvas();
+}

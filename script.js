@@ -30,16 +30,19 @@ function hideKeyNames()
 	$(".key").text("");
 }
 
+function updateScore()
+{
+	var totalNotes = score + missedNotes;
+	$(".scoreBoard").text("Score: " + score + "/" + totalNotes);
+}
+
 function playKey(key)
 {
 	if(key == liveNotes[0].note)
 	{
 		liveNotes.shift();
 		score++;
-		
-		var totalNotes = score + missedNotes;
-		
-		$(".scoreBoard").text("Score: " + score + "/" + totalNotes);
+		updateScore();
 	}
 	//console.log(key);
 }
@@ -117,6 +120,8 @@ function updateLiveNotes()
 		noteCountDown = noteCountDownInit;
 		
 		noteCountDownInit--;
+		
+		updateScore();
 	}
 }
 

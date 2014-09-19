@@ -1,8 +1,10 @@
 var noteCountDownInit = 200;
 var noteCountDown = noteCountDownInit;
+var canvasSpeed = 800;
 
 var score = 0;
 var missedNotes = 0;
+
  
  $("#keyboard .key").click(function(){ playKey(this.id); })
 
@@ -34,6 +36,12 @@ function updateScore()
 {
 	var totalNotes = score + missedNotes;
 	$(".scoreBoard").text("Score: " + score + "/" + totalNotes);
+	
+	if(totalNotes == 20)
+	{
+		stopGame();
+		toggleMenu();
+	}
 }
 
 function playKey(key)
@@ -102,7 +110,7 @@ function updateLiveNotes()
 {
 	for(var i = 0; i < liveNotes.length; i++)
 	{
-		liveNotes[i].x -= canvas.width / 800;
+		liveNotes[i].x -= canvas.width / canvasSpeed;
 	}
 	
 	if(liveNotes.length > 0 && liveNotes[0].x <= 10)

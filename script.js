@@ -177,7 +177,10 @@ function updateLiveNotes()
 		liveNotes.shift();
 	}
 	
-	noteCountDown--;
+	if(noteCountDown > 10)
+	{
+		noteCountDown--;
+	}
 	
 	if(noteCountDown == 0)
 	{

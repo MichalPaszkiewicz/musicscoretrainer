@@ -101,7 +101,6 @@ function updateScore()
 	if(totalNotes == 30)
 	{
 		stopGame();
-		toggleMenu();
 	}
 }
 
@@ -245,6 +244,7 @@ function stopGame()
 	clearCanvas();
 	resetScore();
 	updateScore();
+	toggleMenu();
 }
 
 function togglePause()

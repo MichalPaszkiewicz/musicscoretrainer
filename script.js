@@ -29,18 +29,28 @@ function factoryReset(){
 	}
 }
 
-function getLevel()
+function getFromLocalStorage(item)
 {
-	var level = localStorage.getItem("musicscoretrainer-level");
+	var result = localStorage.getItem("musicscoretrainer-" + item);
 
-	if(level == null)
+	if(result == null)
 	{
-		localStorage.setItem("musicscoretrainer-level",1);
+		localStorage.setItem("musicscoretrainer-" + item,1);
 		return 1;
 	}
 	else{
-		return level;
+		return result;
 	}
+}
+
+function getLevel()
+{
+	return getFromLocalStorage("level");
+}
+
+function getPower()
+{
+	return getFromLocalStorage("power");
 }
 
 function setLevel()
@@ -49,10 +59,17 @@ function setLevel()
 
 	if(score == 30)
 	{
-		localStorage.setItem("musicscoretrainer-level", parseInt(level) + 1)
+		localStorage.setItem("musicscoretrainer-level", parseInt(level) + 1);
 	}
 	
 	displayLevel();
+}
+
+function increasePower()
+{
+	var power = getPower();
+	
+	localStorage.setItem("musicscoretrainer-power", parseInt(power) + 1);
 }
 
 function showKeyNames()
@@ -111,6 +128,7 @@ function playKey(key)
 		liveNotes.shift();
 		score++;
 		updateScore();
+		increasePower();
 	}
 	//console.log(key);
 }

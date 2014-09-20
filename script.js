@@ -153,7 +153,7 @@ function playKey(key)
 	//console.log(key);
 }
 
-functioin buy(product)
+function buy(product)
 {
 	if(product == "skip-level" && getCoins() >= 100)
 	{

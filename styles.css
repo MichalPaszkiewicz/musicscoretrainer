@@ -139,6 +139,8 @@
 .shop{
 	z-index: 300000;
 	background: rgb(17, 73, 9);
+	border: 5px green inset;
+	border-radius: 0;
 }
 
 .settings-cover{

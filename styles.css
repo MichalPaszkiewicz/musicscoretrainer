@@ -32,7 +32,7 @@
 .octave{
 	display: inline-block;
 	position: relative;
-	width: 22%;
+	width: 21%;
 	height: 100%;
 }
 
@@ -41,7 +41,7 @@
 	border-radius: 5px;
 }
 
-.octave, .whitekey{
+.octave .whitekey{
 	width: 10%;
 }
  

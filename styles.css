@@ -36,6 +36,10 @@
 	height: 100%;
 }
 
+.octave .blackkey{
+	margin-left: -6.5%;
+}
+
 .octave.selected{
 	border: 3px solid red;
 	border-radius: 5px;

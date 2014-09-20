@@ -1,6 +1,7 @@
 var noteCountDownInit = 200;
 var noteCountDown = noteCountDownInit;
 var canvasSpeed = 800;
+var paused = false;
 
 var score = 0;
 var missedNotes = 0;
@@ -232,7 +233,7 @@ function runGame()
 		updateLiveNotes();
 		clearCanvas();
 		drawLiveNotes();
-	}, updateRate)
+	}, updateRate);
 }
 
 function stopGame()
@@ -242,4 +243,22 @@ function stopGame()
 	clearCanvas();
 	resetScore();
 	updateScore();
+}
+
+function togglePause()
+{
+	if(paused)
+	{
+		timer = setInterval(function(){
+			updateLiveNotes();
+			clearCanvas();
+			drawLiveNotes();
+		}, updateRate);	
+	}
+	else
+	{
+		clearInterval(timer);
+	}
+	
+	paused = !paused;
 }

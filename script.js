@@ -105,6 +105,11 @@ function toggleMenu()
 	$(".settings-container").toggleClass("hidden");
 }
 
+function toggleShop()
+{
+	$(".shop").toggleClass("hidden");
+}
+
 function resetScore()
 {
 	score = 0;

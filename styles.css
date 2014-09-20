@@ -43,6 +43,7 @@
 
 .octave .whitekey{
 	width: 10%;
+	border: none;
 }
  
  .whitekey, .blackkey{

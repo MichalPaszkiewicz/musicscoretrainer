@@ -177,6 +177,7 @@ function updateLiveNotes()
 	{
 		missedNotes++;
 		liveNotes.shift();
+		updateScore();
 	}
 	
 	noteCountDown--;
@@ -191,8 +192,6 @@ function updateLiveNotes()
 		{
 			noteCountDownInit--;
 		}
-		
-		updateScore();
 	}
 }
 

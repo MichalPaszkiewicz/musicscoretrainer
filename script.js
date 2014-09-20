@@ -7,7 +7,8 @@ var score = 0;
 var missedNotes = 0;
 var updateRate = 10;
  
- $("#keyboard .key").click(function(){ playKey(this.id); })
+ $("#keyboard .key").click(function(){ playKey(this.id); });
+ $(".product").click(function(){ buy(this.id); });
 
 $(".game-container").html("<canvas id='canvas' height=100 width=" + $(this).innerWidth() + "></canvas>");
 var ctx = document.getElementById('canvas').getContext('2d');
@@ -56,13 +57,17 @@ function getCoins()
 	return getFromLocalStorage("coins");
 }
 
-function setLevel()
+function increaseLevel()
 {
 	var level = getLevel();
+	localStorage.setItem("musicscoretrainer-level", parseInt(level) + 1);
+}
 
+function setLevel()
+{
 	if(score == 30)
 	{
-		localStorage.setItem("musicscoretrainer-level", parseInt(level) + 1);
+		increaseLevel();
 	}
 	
 	displayLevel();
@@ -73,6 +78,12 @@ function increaseCoins()
 	var coins = getCoins();
 	
 	localStorage.setItem("musicscoretrainer-coins", parseInt(coins) + 1);
+}
+
+function spendCoins(amount)
+{
+	var coins = getCoins();
+	localStorage.setItem("musicscoretrainer-coins", parseInt(coins) - parseInt(amount));
 }
 
 function showKeyNames()
@@ -140,6 +151,16 @@ function playKey(key)
 		increaseCoins();
 	}
 	//console.log(key);
+}
+
+functioin buy(product)
+{
+	if(product == "skip-level" && getCoins() >= 100)
+	{
+		increaseLevel();
+		spendCoins();
+		displayLevel();
+	}
 }
 
 var startPos = canvas.width;

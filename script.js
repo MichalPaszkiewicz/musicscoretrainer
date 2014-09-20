@@ -160,6 +160,7 @@ function buy(product)
 		increaseLevel();
 		spendCoins(100);
 		displayLevel();
+		toggleShop();
 	}
 }
 

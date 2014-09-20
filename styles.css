@@ -36,6 +36,10 @@
 	height: 100%;
 }
 
+#whole-keyboard .octave .whitekey{
+	border: none;
+}
+
 .octave.selected{
 	border: 3px solid red;
 	border-radius: 5px;

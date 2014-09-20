@@ -48,9 +48,9 @@ function getLevel()
 	return getFromLocalStorage("level");
 }
 
-function getPower()
+function getCoins()
 {
-	return getFromLocalStorage("power");
+	return getFromLocalStorage("coins");
 }
 
 function setLevel()
@@ -65,11 +65,11 @@ function setLevel()
 	displayLevel();
 }
 
-function increasePower()
+function increaseCoins()
 {
-	var power = getPower();
+	var coins = getCoins();
 	
-	localStorage.setItem("musicscoretrainer-power", parseInt(power) + 1);
+	localStorage.setItem("musicscoretrainer-coins", parseInt(coins) + 1);
 }
 
 function showKeyNames()
@@ -128,7 +128,7 @@ function playKey(key)
 		liveNotes.shift();
 		score++;
 		updateScore();
-		increasePower();
+		increaseCoins();
 	}
 	//console.log(key);
 }

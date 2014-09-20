@@ -256,11 +256,11 @@ function togglePause()
 			clearCanvas();
 			drawLiveNotes();
 		}, updateRate);	
-		$("toggle-pause").text("Pause");
+		$(".toggle-pause").text("Pause");
 	}
 	else
 	{
-		$("toggle-pause").text("Continue");
+		$(".toggle-pause").text("Continue");
 		clearInterval(timer);
 	}
 	

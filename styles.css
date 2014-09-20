@@ -160,3 +160,20 @@
 .push{
 	//height: 200px;
 }
+
+.product{
+	cursor: pointer;
+	float: left;
+	border: 3px solid black;
+	border-radius: 15px;
+	height: 80px;
+	width: 80px;
+	margin: 10px;
+	padding: 10px;
+	box-sizing: border-box;
+	background: rgb(36, 35, 35);
+}
+
+.product:hover{
+	background: rgb(73, 72, 72);
+}

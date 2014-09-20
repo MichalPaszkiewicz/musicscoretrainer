@@ -158,7 +158,7 @@ function buy(product)
 	if(product == "skip-level" && getCoins() >= 100)
 	{
 		increaseLevel();
-		spendCoins();
+		spendCoins(100);
 		displayLevel();
 	}
 }

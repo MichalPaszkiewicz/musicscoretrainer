@@ -154,8 +154,11 @@ addRandomNote();
 
 function updateOctave()
 {
-	$(".octave").removeClass("selected");
-	$("o" + liveNotes[0].octave).addClass("selected");
+	if(liveNotes.length > 0)
+	{
+		$(".octave").removeClass("selected");
+		$("#o" + liveNotes[0].octave).addClass("selected");
+	}
 }
 
 function addNote(note)

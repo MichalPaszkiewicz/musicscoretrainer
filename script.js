@@ -17,6 +17,9 @@ function displayLevel()
 {
 	var level = getLevel();
 	$(".level").text(level);
+	
+	var coins = getCoins();
+	$(".coins").text(coins);
 }
 
 displayLevel();

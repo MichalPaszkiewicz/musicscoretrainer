@@ -29,13 +29,12 @@
  	height: 20px;
  }
  
- #whole-keyboard .whitekey{
- 	width: 3.25%;
- }
- 
- #whole-keyboard .blackkey{
- 	width: 2.25%;
- }
+.octave{
+	display: inline-block;
+	position: relative;
+	width: 25%;
+	height: 100%;
+}
  
  .whitekey, .blackkey{
  	display: inline-block;

@@ -238,6 +238,8 @@ function runGame()
 
 function stopGame()
 {
+	paused = false;
+	$("toggle-pause").text("Pause")
 	setLevel();
 	clearInterval(timer);
 	clearCanvas();
@@ -254,9 +256,11 @@ function togglePause()
 			clearCanvas();
 			drawLiveNotes();
 		}, updateRate);	
+		$("toggle-pause").text("Pause");
 	}
 	else
 	{
+		$("toggle-pause").text("Continue");
 		clearInterval(timer);
 	}
 	

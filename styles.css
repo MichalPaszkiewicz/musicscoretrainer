@@ -25,7 +25,7 @@
  
  #whole-keyboard{
  	position: relative;
-	margin: 10px;
+	margin: 5px;
  	height: 35px;
  }
  
@@ -40,6 +40,10 @@
 	border: 3px solid red;
 	border-radius: 5px;
 }
+
+.octave, .whitekey{
+	width: 10%;
+}
  
  .whitekey, .blackkey{
  	display: inline-block;
@@ -49,7 +53,7 @@
  
  .whitekey{
   	height: 100%;
-  	width: 12%;
+  	width: 12.5%;
   	background: white;
   	border: 1px black solid;
   	border-left: none;

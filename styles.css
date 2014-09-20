@@ -36,6 +36,10 @@
 	height: 100%;
 }
 
+.octave: hover{
+	border: 3px gray solid;
+}
+
 .octave .blackkey{
 	margin-left: -6.5%;
 }

@@ -40,11 +40,6 @@
 	border: 3px solid red;
 	border-radius: 5px;
 }
-
-.octave .whitekey{
-	width: 10%;
-	border: none;
-}
  
  .whitekey, .blackkey{
  	display: inline-block;
@@ -54,9 +49,9 @@
  
  .whitekey{
   	height: 100%;
-  	width: 12.5%;
+  	width: 13%;
   	background: white;
-  	border: 1px black solid;
+  	border: 3px black solid;
   	border-left: none;
   	z-index: 100;
   	color: black;

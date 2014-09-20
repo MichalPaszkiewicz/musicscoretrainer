@@ -162,6 +162,7 @@
 }
 
 .product{
+	clear:both;
 	cursor: pointer;
 	float: left;
 	border: 3px solid black;

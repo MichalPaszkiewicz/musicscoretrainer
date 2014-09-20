@@ -127,6 +127,7 @@ function playKey(key)
 	{
 		liveNotes.shift();
 		score++;
+		updateOctave();
 		updateScore();
 		increaseCoins();
 	}
@@ -151,7 +152,7 @@ notes.octave = {y : "49", octave : 3};
 var liveNotes = [];
 addRandomNote();
 
-function updateOctavve()
+function updateOctave()
 {
 	$(".octave").removeClass("selected");
 	$("o" + liveNotes[0].octave).addClass("selected");
@@ -160,6 +161,7 @@ function updateOctavve()
 function addNote(note)
 {
 	liveNotes.push({x : startPos, note : note, octave : notes[note].octave});
+	updateOctave();
 }
 
 function addRandomNote()
@@ -201,6 +203,7 @@ function updateLiveNotes()
 	{
 		missedNotes++;
 		liveNotes.shift();
+		updateOctave();
 		updateScore();
 	}
 	

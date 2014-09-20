@@ -26,13 +26,13 @@
  #whole-keyboard{
  	position: relative;
 	margin: 10px;
- 	height: 20px;
+ 	height: 35px;
  }
  
 .octave{
 	display: inline-block;
 	position: relative;
-	width: 25%;
+	width: 22%;
 	height: 100%;
 }
  
@@ -44,7 +44,7 @@
  
  .whitekey{
   	height: 100%;
-  	width: 13%;
+  	width: 12.5%;
   	background: white;
   	border: 1px black solid;
   	border-left: none;

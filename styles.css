@@ -24,7 +24,17 @@
  }
  
  #whole-keyboard{
+ 	position: relative;
+	margin: 10px;
  	height: 20px;
+ }
+ 
+ #whole-keyboard .whitekey{
+ 	width: 3.25%;
+ }
+ 
+ #whole-keyboard .blackkey{
+ 	width: 2.25%;
  }
  
  .whitekey, .blackkey{

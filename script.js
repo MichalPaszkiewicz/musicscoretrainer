@@ -180,17 +180,17 @@ var notes = function(value){
 	return this[value];
 };
 
-notes.g# = {y : "13", octave : 4};
+notes.gs = {y : "13", octave : 4};
 notes.g = {y : "13", octave : 4};
-notes.f# = {y : "20", octave : 4};
+notes.fs = {y : "20", octave : 4};
 notes.f = {y : "20", octave : 4};
 notes.e = {y : "27", octave : 4};
-notes.d# = {y : "34", octave : 4};
+notes.ds = {y : "34", octave : 4};
 notes.d = {y : "34", octave : 4};
-notes.c# = {y : "41", octave : 4};
+notes.cs = {y : "41", octave : 4};
 notes.c = {y : "41", octave : 4};
 notes.b = {y : "48", octave : 3};
-notes.a# = {y : "55", octave : 3};
+notes.as = {y : "55", octave : 3};
 notes.a = {y : "55", octave : 3};
 notes.octave = {y : "49", octave : 3};
 

@@ -218,11 +218,11 @@ function drawNote(ctx, x, y)
 	
 	if(y < 48)
 	{
-    		ctx.fillRect(x - 5, y, 2, 40);	
+    		ctx.fillRect(x - 5, y, 2, 30);	
 	}
 	else
 	{
-		ctx.fillRect(x + 5, y - 40, 2, 40);
+		ctx.fillRect(x + 5, y - 30, 2, 30);
 	}
 }
 

@@ -216,13 +216,13 @@ function drawNote(ctx, x, y)
 	ctx.arc(x, y, 6, 0, 2 * Math.PI, false);
 	ctx.fill();
 	
-	if(x > 48)
+	if(y > 48)
 	{
-    		ctx.fillRect(x - 3, y, 2, 40);	
+    		ctx.fillRect(x - 6, y, 2, 40);	
 	}
 	else
 	{
-		ctx.fillRect(x + 3, y - 10, 2, 40);
+		ctx.fillRect(x + 6, y - 40, 2, 40);
 	}
 }
 

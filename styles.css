@@ -8,6 +8,7 @@
  
  .ui-page.ui-page-theme-a.ui-page-active{
  	height: 100%;
+ 	background: black;
  }
  
  #main-container{
@@ -15,6 +16,8 @@
  	width: 100%;
  	color: white;
  	background: black;
+ 	max-width: 1000px;
+	margin: auto;
  } 
  
  #keyboard{

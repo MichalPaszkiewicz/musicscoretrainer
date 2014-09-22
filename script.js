@@ -257,7 +257,9 @@ function drawLiveNotes()
 		drawNote(ctx, liveNotes[i].x, notes[liveNotes[i].note].y);
 	}
 	
-	drawLastKeyedNote();
+	if(lastNote != null){
+		drawLastKeyedNote();
+	}
 }
 
 function updateLiveNotes()

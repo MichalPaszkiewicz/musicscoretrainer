@@ -3,6 +3,9 @@ var noteCountDown = noteCountDownInit;
 var canvasSpeed = 800;
 var paused = false;
 
+var lastNote = null;
+var lastNoteCorrect = true;
+
 var score = 0;
 var missedNotes = 0;
 var updateRate = 10;
@@ -91,7 +94,7 @@ function showKeyNames()
 	var uiNotes = $(".key");
 	for(var i = 0; i < uiNotes.length; i++)
 	{
-		console.log(uiNotes[i].id);
+		//console.log(uiNotes[i].id);
 		$(uiNotes[i]).html(uiNotes[i].id.toUpperCase());
 	}
 }
@@ -149,7 +152,14 @@ function playKey(key)
 		updateOctave();
 		updateScore();
 		increaseCoins();
+		lastNoteCorrect = true;
 	}
+	else
+	{
+		lastNoteCorrect = false;
+	}
+	
+	lastNote = key;
 	//console.log(key);
 }
 
@@ -224,6 +234,20 @@ function drawNote(ctx, x, y)
 	{
 		ctx.fillRect(x + 5, y - 30, 2, 30);
 	}
+}
+
+function drawLastKeyedNote()
+{
+	ctx.beginPath();
+	if(lastNoteCorrect){
+		ctx.fillStyle="green";
+	}
+	else{
+		ctx.fillStyle="red";
+	}
+	
+	ctx.arc(20, notes[lastNote].y, 6, 0, 2 * Math.PI, false);
+	ctx.fill();
 }
 
 function drawLiveNotes()

@@ -296,6 +296,7 @@ var timer = function(){};
 
 function runGame()
 {
+	lastNote = null;
 	var level = getLevel();
 	
 	if(level <= 5)

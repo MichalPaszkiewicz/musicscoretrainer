@@ -16,6 +16,8 @@
  	width: 100%;
  	color: white;
  	background: black;
+ 	max-width: 1000px;
+	margin: auto;
  } 
  
  #keyboard{

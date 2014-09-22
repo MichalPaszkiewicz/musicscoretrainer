@@ -307,7 +307,7 @@ function runGame()
 function stopGame()
 {
 	paused = false;
-	$("toggle-pause").text("Pause")
+	$(".toggle-pause").text("Pause")
 	setLevel();
 	clearInterval(timer);
 	clearCanvas();

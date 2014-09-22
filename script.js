@@ -145,7 +145,8 @@ function updateScore()
 
 function playKey(key)
 {
-	if(key == liveNotes[0].note)
+	var notePlayed = key.replace("#", "s");
+	if(notePlayed == liveNotes[0].note)
 	{
 		liveNotes.shift();
 		score++;
@@ -159,7 +160,7 @@ function playKey(key)
 		lastNoteCorrect = false;
 	}
 	
-	lastNote = key;
+	lastNote = notePlayed;
 	//console.log(key);
 }
 

@@ -215,6 +215,15 @@ function drawNote(ctx, x, y)
 	ctx.fillStyle="black";
 	ctx.arc(x, y, 6, 0, 2 * Math.PI, false);
 	ctx.fill();
+	
+	if(x > 48)
+	{
+    		ctx.fillRect(x - 3, y, 1, 10);	
+	}
+	else
+	{
+		ctx.fillRect(x + 3, y - 10, 1, 10);
+	}
 }
 
 function drawLiveNotes()

@@ -248,17 +248,17 @@ function drawNote(ctx, x, y, isSharp, colour)
 	if(isSharp)
 	{
 		x -= 20;
-		y += 6;
+		y += 7;
 		
 		ctx.beginPath();
 		ctx.moveTo(x,y);
-		ctx.lineTo(x + 7,y - 14);
+		ctx.lineTo(x + 8,y - 16);
 		ctx.stroke();
 		
 		x += 4;
 		ctx.beginPath();
 		ctx.moveTo(x,y);
-		ctx.lineTo(x + 7,y - 14);
+		ctx.lineTo(x + 8,y - 16);
 		ctx.stroke();
 		
 		x -= 7;
@@ -270,7 +270,7 @@ function drawNote(ctx, x, y, isSharp, colour)
 		ctx.stroke();
 		
 		x += 2;
-		y -= 4;
+		y -= 5;
 		
 		ctx.beginPath();
 		ctx.moveTo(x,y);

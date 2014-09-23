@@ -147,7 +147,7 @@ function updateScore()
 function playSound(freq){
 	noteContext = new AudioContext();
 	var oscillator = noteContext.createOscillator();
-	oscillator.frequency.value = 880;
+	oscillator.frequency.value = freq;
 	oscillator.connect(noteContext.destination);
 	oscillator.noteOn(0);
 	setTimeout(function(){
@@ -158,7 +158,7 @@ function playKey(key)
 {
 	var notePlayed = key.replace("#", "s");
 	
-	playSound(notes[key].freq);
+	playSound(notes[notePlayed].freq);
 	
 	if(notePlayed == liveNotes[0].note)
 	{

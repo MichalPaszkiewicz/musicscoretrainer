@@ -144,9 +144,10 @@ function updateScore()
 	}
 }
 
+var noteContext = new AudioContext();
+var oscillator = noteContext.createOscillator();
+
 function playSound(freq){
-	noteContext = new AudioContext();
-	var oscillator = noteContext.createOscillator();
 	oscillator.frequency.value = freq;
 	oscillator.connect(noteContext.destination);
 	oscillator.noteOn(0);

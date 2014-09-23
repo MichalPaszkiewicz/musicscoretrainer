@@ -144,9 +144,22 @@ function updateScore()
 	}
 }
 
+function playSound(freq){
+	noteContext = new AudioContext();
+	var oscillator = noteContext.createOscillator();
+	oscillator.frequency.value = 880;
+	oscillator.connect(noteContext.destination);
+	oscillator.noteOn(0);
+	setTimeout(function(){
+	oscillator.noteOff(0);
+}, 1000);};
+
 function playKey(key)
 {
 	var notePlayed = key.replace("#", "s");
+	
+	playSound(notes[key].freq);
+	
 	if(notePlayed == liveNotes[0].note)
 	{
 		liveNotes.shift();
@@ -182,18 +195,18 @@ var notes = function(value){
 	return this[value];
 };
 
-notes.gs = {y : "13", octave : 4, sharp : true};
-notes.g = {y : "13", octave : 4, sharp : false};
-notes.fs = {y : "20", octave : 4, sharp : true};
-notes.f = {y : "20", octave : 4, sharp : false};
-notes.e = {y : "27", octave : 4, sharp : false};
-notes.ds = {y : "34", octave : 4, sharp : true};
-notes.d = {y : "34", octave : 4, sharp : false};
-notes.cs = {y : "41", octave : 4, sharp : true};
-notes.c = {y : "41", octave : 4, sharp : false};
-notes.b = {y : "48", octave : 3, sharp : false};
-notes.as = {y : "55", octave : 3, sharp : true};
-notes.a = {y : "55", octave : 3, sharp : false};
+notes.gs = {y : "13", octave : 4, sharp : true, freq : 830.61};
+notes.g = {y : "13", octave : 4, sharp : false, freq : 783.99};
+notes.fs = {y : "20", octave : 4, sharp : true, freq : 739.99};
+notes.f = {y : "20", octave : 4, sharp : false, freq : 698.46};
+notes.e = {y : "27", octave : 4, sharp : false, freq : 659.25};
+notes.ds = {y : "34", octave : 4, sharp : true, freq : 622.25};
+notes.d = {y : "34", octave : 4, sharp : false, freq : 587.33};
+notes.cs = {y : "41", octave : 4, sharp : true, freq : 554.37};
+notes.c = {y : "41", octave : 4, sharp : false, freq : 523.25};
+notes.b = {y : "48", octave : 3, sharp : false, freq : 493.88};
+notes.as = {y : "55", octave : 3, sharp : true, freq : 466.16};
+notes.a = {y : "55", octave : 3, sharp : false, freq : 440};
 notes.octave = {y : "49"};
 
 var liveNotes = [];

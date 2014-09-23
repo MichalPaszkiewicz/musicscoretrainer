@@ -2,6 +2,7 @@ var noteCountDownInit = 200;
 var noteCountDown = noteCountDownInit;
 var canvasSpeed = 800;
 var paused = false;
+var sharpsOn = false;
 
 var lastNote = null;
 var lastNoteCorrect = true;
@@ -29,6 +30,7 @@ function displayLevel()
 displayLevel();
 
 function factoryReset(){
+	sharpsOn = false;
 	if(confirm("Are you sure you want to reset this game and go back to level 1?"))
 	{
 		localStorage.setItem("musicscoretrainer-level", 1);
@@ -214,8 +216,21 @@ function addNote(note)
 
 function addRandomNote()
 {
+	
 	var number = Math.floor( 7 * Math.random() );
 	var letter = String.fromCharCode(number + 97);
+	
+	if(sharpsOn)
+	{
+		if((letter != "e") && (letter != "b"))
+		{
+			if(Math.random() > 0.5)
+			{
+				letter += "s";
+			}
+		}
+	}
+	
 	addNote(letter);
 }
 
@@ -350,6 +365,11 @@ function runGame()
 	else
 	{
 		hideKeyNames();
+	}
+	
+	if(level > 7)
+	{
+		sharpsOn = true;
 	}
 	
 	noteCountDownInit = 200;

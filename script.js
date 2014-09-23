@@ -245,7 +245,7 @@ function drawNote(ctx, x, y, isSharp, colour)
 	if(isSharp)
 	{
 		x -= 20;
-		y += 7;
+		y += 6;
 		
 		ctx.beginPath();
 		ctx.moveTo(x,y);

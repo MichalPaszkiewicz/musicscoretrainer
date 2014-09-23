@@ -226,6 +226,9 @@ function clearCanvas()
 
 function drawNote(ctx, x, y, isSharp, colour)
 {
+	x = parseInt(x);
+	y = parseInt(y);
+	
 	if (typeof colour === 'undefined') { colour = "black"; }
 	
 	ctx.beginPath();

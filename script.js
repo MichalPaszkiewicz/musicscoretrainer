@@ -129,7 +129,6 @@ function resetScore()
 	score = 0;
 	missedNotes = 0;
 	liveNotes = [];
-	addRandomNote();
 }
 
 function updateScore()
@@ -246,7 +245,7 @@ function drawNote(ctx, x, y, isSharp, colour)
 	if(isSharp)
 	{
 		x -= 20;
-		y += 10;
+		y += 7;
 		
 		ctx.beginPath();
 		ctx.moveTo(x,y);
@@ -280,10 +279,10 @@ function drawNote(ctx, x, y, isSharp, colour)
 function drawLastKeyedNote()
 {
 	if(lastNoteCorrect){
-		drawNote(ctx, 20, notes[lastNote].y, notes[lastNote].sharp, "green");
+		drawNote(ctx, 30, notes[lastNote].y, notes[lastNote].sharp, "green");
 	}
 	else{
-		drawNote(ctx, 20, notes[lastNote].y, notes[lastNote].sharp, "red");
+		drawNote(ctx, 30, notes[lastNote].y, notes[lastNote].sharp, "red");
 	}
 }
 

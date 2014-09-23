@@ -297,10 +297,10 @@ function drawNote(ctx, x, y, isSharp, colour)
 function drawLastKeyedNote()
 {
 	if(lastNoteCorrect){
-		drawNote(ctx, 40, notes[lastNote].y, notes[lastNote].sharp, "green");
+		drawNote(ctx, 25, notes[lastNote].y, notes[lastNote].sharp, "green");
 	}
 	else{
-		drawNote(ctx, 40, notes[lastNote].y, notes[lastNote].sharp, "red");
+		drawNote(ctx, 25, notes[lastNote].y, notes[lastNote].sharp, "red");
 	}
 }
 

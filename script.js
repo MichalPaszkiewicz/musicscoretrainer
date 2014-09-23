@@ -164,7 +164,6 @@ function updateScore()
  	} catch(e){
  		alert("No web audio oscillator support in this browser. Use Chrome, fool!");
  	}
- 	}
  }(window));
   
 function playKey(key)

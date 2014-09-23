@@ -269,8 +269,8 @@ function drawNote(ctx, x, y, isSharp, colour)
 		ctx.lineTo(x + 14,y);
 		ctx.stroke();
 		
-		x += 2;
-		y -= 5;
+		x += 3;
+		y -= 6;
 		
 		ctx.beginPath();
 		ctx.moveTo(x,y);

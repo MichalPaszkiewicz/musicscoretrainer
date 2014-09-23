@@ -247,8 +247,6 @@ function drawNote(ctx, x, y, isSharp, colour)
 	{
 		x -= 10;
 		
-		var c=document.getElementById("myCanvas");
-		var ctx=c.getContext("2d");
 		ctx.beginPath();
 		ctx.moveTo(x,y);
 		ctx.lineTo(x + 7,y - 14);

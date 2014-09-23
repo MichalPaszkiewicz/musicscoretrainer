@@ -225,7 +225,7 @@ function clearCanvas()
 	ctx.clearRect(0,0,canvas.width,canvas.height);
 }
 
-function drawNote(x, y, isSharp, colour)
+function drawNote(ctx, x, y, isSharp, colour)
 {
 	if (typeof colour === 'undefined') { colour = "black"; }
 	
@@ -280,12 +280,11 @@ function drawNote(x, y, isSharp, colour)
 
 function drawLastKeyedNote()
 {
-	ctx.beginPath();
 	if(lastNoteCorrect){
-		drawNote(20, notes[lastNote].y, notes[lastNote].sharp, "green");
+		drawNote(ctx, 20, notes[lastNote].y, notes[lastNote].sharp, "green");
 	}
 	else{
-		drawNote(20, notes[lastNote].y, notes[lastNote].sharp, "red");
+		drawNote(ctx, 20, notes[lastNote].y, notes[lastNote].sharp, "red");
 	}
 }
 
@@ -293,7 +292,7 @@ function drawLiveNotes()
 {
 	for(var i = 0; i < liveNotes.length; i++)
 	{
-		drawNote(liveNotes[i].x, notes[liveNotes[i].note].y, notes[liveNotes[i].note].sharp);
+		drawNote(ctx, liveNotes[i].x, notes[liveNotes[i].note].y, notes[liveNotes[i].note].sharp);
 	}
 	
 	if(lastNote != null){

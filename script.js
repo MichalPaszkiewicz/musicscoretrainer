@@ -227,7 +227,7 @@ function clearCanvas()
 
 function drawNote(x, y, isSharp, colour)
 {
-	if (typeof colour === 'undefined') { colour = black; }
+	if (typeof colour === 'undefined') { colour = "black"; }
 	
 	ctx.beginPath();
 	ctx.fillStyle = colour;

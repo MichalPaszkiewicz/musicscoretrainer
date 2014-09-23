@@ -4,6 +4,8 @@ var canvasSpeed = 800;
 var paused = false;
 var sharpsOn = false;
 
+var soundIssues = false;
+
 var lastNote = null;
 var lastNoteCorrect = true;
 
@@ -163,6 +165,7 @@ function updateScore()
  		oscillator = audio_context.createOscillator();
  	} catch(e){
  		alert("No web audio oscillator support in this browser. Use Chrome, fool!");
+ 		soundIssues = true;
  	}
  }(window));
   
@@ -170,9 +173,10 @@ function playKey(key)
 {
 	var notePlayed = key.replace("#", "s");
 	
-	playSound(notes[notePlayed].freq);
-	
-	setTimeout(function(){ stopSound(); }, 500 );
+	if(soundIssues == false){
+		playSound(notes[notePlayed].freq);
+		setTimeout(function(){ stopSound(); }, 500 );
+	}
 	
 	if(notePlayed == liveNotes[0].note)
 	{

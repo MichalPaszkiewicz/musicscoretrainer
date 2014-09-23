@@ -144,22 +144,36 @@ function updateScore()
 	}
 }
 
-var noteContext = new AudioContext();
-var oscillator = noteContext.createOscillator();
+  var audio_context, oscillator;
 
-function playSound(freq){
-	oscillator.frequency.value = freq;
-	oscillator.connect(noteContext.destination);
-	oscillator.noteOn(0);
-	setTimeout(function(){
-	oscillator.noteOff(0);
-}, 1000);};
+  function stopSound() {
+    oscillator.noteOff(0);
+  }
 
+  function playSound(freq) {
+    oscillator = audio_context.createOscillator();
+    oscillator.frequency.value = freq;
+    oscillator.connect(audio_context.destination);
+    oscillator.noteOn(0);
+  }
+  
+ (function init(g){
+ 	try{
+ 		audio_context = new(g.AudioContext || g.webkitAudioContext);
+ 		oscillator = audio_context.createOscillator();
+ 	} catch(e){
+ 		alert("No web audio oscillator support in this browser. Use Chrome, fool!");
+ 	}
+ 	}
+ }(window));
+  
 function playKey(key)
 {
 	var notePlayed = key.replace("#", "s");
 	
 	playSound(notes[notePlayed].freq);
+	
+	setTimeout(function(){ stopSound(); }, 500 );
 	
 	if(notePlayed == liveNotes[0].note)
 	{

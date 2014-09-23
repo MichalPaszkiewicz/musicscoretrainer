@@ -181,19 +181,19 @@ var notes = function(value){
 	return this[value];
 };
 
-notes.gs = {y : "13", octave : 4};
-notes.g = {y : "13", octave : 4};
-notes.fs = {y : "20", octave : 4};
-notes.f = {y : "20", octave : 4};
-notes.e = {y : "27", octave : 4};
-notes.ds = {y : "34", octave : 4};
-notes.d = {y : "34", octave : 4};
-notes.cs = {y : "41", octave : 4};
-notes.c = {y : "41", octave : 4};
-notes.b = {y : "48", octave : 3};
-notes.as = {y : "55", octave : 3};
-notes.a = {y : "55", octave : 3};
-notes.octave = {y : "49", octave : 3};
+notes.gs = {y : "13", octave : 4, sharp : true};
+notes.g = {y : "13", octave : 4, sharp : false};
+notes.fs = {y : "20", octave : 4, sharp : true};
+notes.f = {y : "20", octave : 4, sharp : false};
+notes.e = {y : "27", octave : 4, sharp : false};
+notes.ds = {y : "34", octave : 4, sharp : true};
+notes.d = {y : "34", octave : 4, sharp : false};
+notes.cs = {y : "41", octave : 4, sharp : true};
+notes.c = {y : "41", octave : 4, sharp : false};
+notes.b = {y : "48", octave : 3, sharp : false};
+notes.as = {y : "55", octave : 3, sharp : true};
+notes.a = {y : "55", octave : 3, sharp : false};
+notes.octave = {y : "49"};
 
 var liveNotes = [];
 addRandomNote();
@@ -225,10 +225,12 @@ function clearCanvas()
 	ctx.clearRect(0,0,canvas.width,canvas.height);
 }
 
-function drawNote(ctx, x, y)
+function drawNote(x, y, isSharp, colour)
 {
+	if (typeof colour === 'undefined') { colour = black; }
+	
 	ctx.beginPath();
-	ctx.fillStyle="black";
+	ctx.fillStyle = colour;
 	ctx.arc(x, y, 6, 0, 2 * Math.PI, false);
 	ctx.fill();
 	
@@ -240,27 +242,58 @@ function drawNote(ctx, x, y)
 	{
 		ctx.fillRect(x + 5, y - 30, 2, 30);
 	}
+	
+	if(isSharp)
+	{
+		x -= 10;
+		
+		var c=document.getElementById("myCanvas");
+		var ctx=c.getContext("2d");
+		ctx.beginPath();
+		ctx.moveTo(x,y);
+		ctx.lineTo(x + 7,y - 14);
+		ctx.stroke();
+		
+		x += 4;
+		ctx.beginPath();
+		ctx.moveTo(x,y);
+		ctx.lineTo(x + 7,y - 14);
+		ctx.stroke();
+		
+		x -= 7;
+		y -= 4;
+		
+		ctx.beginPath();
+		ctx.moveTo(x,y);
+		ctx.lineTo(x + 14,y);
+		ctx.stroke();
+		
+		x += 2;
+		y -= 4;
+		
+		ctx.beginPath();
+		ctx.moveTo(x,y);
+		ctx.lineTo(x + 14,y);
+		ctx.stroke();
+	}
 }
 
 function drawLastKeyedNote()
 {
 	ctx.beginPath();
 	if(lastNoteCorrect){
-		ctx.fillStyle="green";
+		drawNote(20, notes[lastNote].y, notes[lastNote].sharp, "green");
 	}
 	else{
-		ctx.fillStyle="red";
+		drawNote(20, notes[lastNote].y, notes[lastNote].sharp, "red");
 	}
-	
-	ctx.arc(20, notes[lastNote].y, 6, 0, 2 * Math.PI, false);
-	ctx.fill();
 }
 
 function drawLiveNotes()
 {
 	for(var i = 0; i < liveNotes.length; i++)
 	{
-		drawNote(ctx, liveNotes[i].x, notes[liveNotes[i].note].y);
+		drawNote(liveNotes[i].x, notes[liveNotes[i].note].y, notes[liveNotes[i].note].sharp);
 	}
 	
 	if(lastNote != null){

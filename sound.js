@@ -1,9 +1,11 @@
-var audio_context, oscillator, gainNode;
+var audio_context, oscillator, gainNode, volController;
 
 var initialVol = 0.8;
+var currentVol = initialVol;
 var finalVol = 0;
 
   function stopSound() {
+    clearInterval(volController);
     oscillator.noteOff(0);
     gainNode.disconnect(audio_context.destination);
   }
@@ -20,7 +22,11 @@ var finalVol = 0;
           oscillator.frequency.value = freq;
           oscillator.start();
           gainNode.gain.value = initialVol;
-
+          
+          volController = setInterval(function(){ 
+            gainNode.gain.value = currentVol; 
+            currentVol -= 0.01
+          }, 100);
   }
   
  (function init(g){

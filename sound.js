@@ -1,8 +1,7 @@
 var audio_context, oscillator, gainNode;
 
-var maxVol = 0.02;
-var initialVol = 0.01;
-var soundPlaying = false;
+var initialVol = 0.8;
+var finalVol = 0;
 
   function stopSound() {
     oscillator.noteOff(0);
@@ -11,14 +10,6 @@ var soundPlaying = false;
 
   function playSound(freq) {
     
-    if(soundPlaying){
-      gainNode.connect(audio_context.destination);
-      
-      oscillator.frequency.value = freq;
-      gainNode.gain.value = 0.8;
-    }
-    
-    else{
           oscillator = audio_context.createOscillator();
           gainNode = audio_context.createGain();
           
@@ -29,9 +20,7 @@ var soundPlaying = false;
           oscillator.frequency.value = freq;
           oscillator.start();
           gainNode.gain.value = initialVol;
-          
-          soundPlaying = true;
-    }
+
   }
   
  (function init(g){

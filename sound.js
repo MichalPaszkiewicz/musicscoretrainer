@@ -13,7 +13,7 @@ var finalVol = 0;
   }
 
   function playSound(freq) {
-          stopSound();
+          if(gainNode == undefined){ stopSound(); }
           oscillator = audio_context.createOscillator();
           gainNode = audio_context.createGain();
           

@@ -8,7 +8,7 @@ var finalVol = 0;
     clearInterval(volController);
     currentVol = initialVol;
     
-    oscillator.noteOff(0);
+    //oscillator.noteOff(0);
     gainNode.disconnect(audio_context.destination);
   }
 

@@ -152,7 +152,6 @@ function playKey(key)
 	
 	if(soundIssues == false){
 		playSound(notes[notePlayed].freq);
-		setTimeout(function(){ stopSound(); }, 500 );
 	}
 	
 	if(notePlayed == liveNotes[0].note)

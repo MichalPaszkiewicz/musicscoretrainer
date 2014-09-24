@@ -30,7 +30,7 @@ var finalVol = 0;
             gainNode.gain.value = currentVol; 
             currentVol -= 0.05;
             
-            if(currentVol == 0)
+            if(currentVol <= 0)
             {
               currentVol = initialVol;
               clearInterval(volController);

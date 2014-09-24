@@ -28,13 +28,13 @@ var finalVol = 0;
           volController = setInterval(function(){ 
             
             gainNode.gain.value = currentVol; 
-            currentVol -= 0.05;
             
             if(currentVol <= 0)
             {
               currentVol = initialVol;
-              clearInterval(volController);
+              stopSound();
             }
+            currentVol -= 0.05;
           }, 10);
   }
   

@@ -26,7 +26,7 @@ var finalVol = 0;
           volController = setInterval(function(){ 
             gainNode.gain.value = currentVol; 
             currentVol -= 0.01
-          }, 100);
+          }, 10);
   }
   
  (function init(g){

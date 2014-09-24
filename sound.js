@@ -1,4 +1,7 @@
-var audio_context, oscillator;
+var audio_context, oscillator, gainNode;
+
+var maxVol = 0.02;
+var initialVol = 0.01;
 
   function stopSound() {
     oscillator.noteOff(0);
@@ -8,6 +11,13 @@ var audio_context, oscillator;
     oscillator = audio_context.createOscillator();
     oscillator.frequency.value = freq;
     oscillator.connect(audio_context.destination);
+    
+    gainNode = audio_context.createGain();
+    oscillator.connect(gainNode);
+    
+    gainNode.gain.value = initialVol;
+    
+    gainNode.connect(audio_context.destination);
     oscillator.noteOn(0);
   }
   

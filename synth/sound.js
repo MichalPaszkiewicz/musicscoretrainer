@@ -23,20 +23,12 @@ var finalVol = 0;
           oscillator.type = "triangle";
           oscillator.frequency.value = freq;
           oscillator.start();
-          gainNode.gain.value = initialVol;
-          
-          volController = setInterval(function(){ 
-            
-            gainNode.gain.value = currentVol; 
-            
-            if(currentVol <= 0)
-            {
-              currentVol = initialVol;
-              stopSound();
-            }
-            currentVol -= 0.05;
-          }, 10);
+          gainNode.gain.value = ("#oscillator-gain").val();
   }
+  
+  $("#oscillator-gain").change(function(){
+    gainNode.gain.value = ("#oscillator-gain").val();
+  });
   
  (function init(g){
  	try{

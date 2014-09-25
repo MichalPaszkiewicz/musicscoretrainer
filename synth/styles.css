@@ -1,0 +1,185 @@
+body.ui-overlay-a{
+ 	margin: 0;
+ }
+ 
+ .hidden{
+ 	display: none;
+ }
+ 
+ .ui-page.ui-page-theme-a.ui-page-active{
+ 	height: 100%;
+ 	background: black;
+ }
+ 
+ #main-container{
+ 	height: 100%;
+ 	width: 100%;
+ 	color: white;
+ 	background: black;
+ } 
+ 
+ #keyboard{
+ 	height: 180px;
+ 	width: 100%;
+ 	position: relative;
+ }
+ 
+ #whole-keyboard{
+ 	position: relative;
+	margin: 5px;
+ 	height: 35px;
+ }
+ 
+.octave{
+	display: inline-block;
+	position: relative;
+	width: 21%;
+	height: 100%;
+}
+
+.octave:hover{
+	border: 3px gray solid;
+}
+
+.octave .blackkey{
+	margin-left: -6.5%;
+}
+
+.octave.selected{
+	border: 3px solid red;
+	border-radius: 5px;
+}
+ 
+ .whitekey, .blackkey{
+ 	display: inline-block;
+ 	cursor: pointer;
+ 	border-radius: 0 0 10px 10px;
+ }
+ 
+ .whitekey{
+  	height: 100%;
+  	width: 14.27%;
+  	background: white;
+  	border: 3px black solid;
+  	border-left: none;
+  	z-index: 100;
+  	color: black;
+	font-size: 20px;
+	text-align: center;
+	line-height: 180px;
+	box-sizing: border-box;
+ }
+ 
+ .whitekey:hover{
+ 	background: rgb(230,230,230);
+ }
+ 
+ .blackkey{
+ 	position: absolute;
+ 	height: 60%;
+	width: 9%;
+	z-index: 1000;
+	margin-left: -5%;
+	background: black;
+	color: white;
+	font-size: 20px;
+	text-align: center;
+	line-height: 100px;
+	box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.6);
+ }
+
+.blackkey:hover{
+	background: rgb(70, 70, 70);
+	box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.4);
+}
+
+.game-container{
+	margin-top:15px;
+	width: 100%;
+	height: 100px;
+	background: url("gamebackground.png");// rgb(255, 251, 233);
+}
+
+.scoreBoard{
+	position: absolute;
+	top: 20px;
+	font-size: 53px;
+	margin-top: 17px;
+	margin-left: 30px;
+	opacity: 0.2;
+	color: black;
+}
+
+.settings-container{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 50000;
+}
+
+.settings-box, .shop{
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	height: 230px;
+	width: 90%;
+	max-width: 600px;
+	background: black;
+	margin: auto;
+	border-radius: 10px;
+	box-shadow: 0 0 14px 0px black;
+	padding: 10px;
+	color: white;
+	z-index: 200000;
+	text-align: center;
+	font-size: 20px;
+}
+
+.shop{
+	z-index: 300000;
+	background: rgb(17, 73, 9);
+	border: 5px green inset;
+	border-radius: 0;
+}
+
+.settings-cover{
+	background: white;
+	z-index: 100000;
+	opacity: 0.9;
+	height: 100%;
+	width: 100%;
+}
+
+.level, .coins{
+	display: inline-block;
+}
+
+.clearfix{
+	clear:both;
+}
+
+.push{
+	//height: 200px;
+}
+
+.product{
+	clear:both;
+	cursor: pointer;
+	float: left;
+	border: 3px solid black;
+	border-radius: 15px;
+	height: 80px;
+	width: 80px;
+	margin: 10px;
+	padding: 10px;
+	box-sizing: border-box;
+	background: rgb(36, 35, 35);
+}
+
+.product:hover{
+	background: rgb(73, 72, 72);
+}

@@ -9,8 +9,11 @@
 	</head>
 	<body>
 		<div id="main-container">
-			<button onclick="playSound()"></button>
-			<button onclick="stopSound()"></button>
+			<div class="synth-container">
+				<input type="range" name="points" min="0" max="1">
+				<button onclick="playSound()">Play sound</button>
+				<button onclick="stopSound()">Stop sound</button>
+			</div>
 			<div class="push clearfix"></div>
 		</div>
 		<script src="sound.js"></script>

@@ -32,7 +32,7 @@ var finalVol = 0;
           $("input[type='radio'][name='oscillator-gain']") // select the radio by its id
             .change(function(){ // bind a function to the change event
                 if( $(this).is(":checked") ){ // check if the radio is checked
-                    var oscillator.type = $(this).val(); // retrieve the value
+                    oscillator.type = $(this).val(); // retrieve the value
                 }
             });
   }

@@ -28,6 +28,13 @@ var finalVol = 0;
             $("#oscillator-gain").change(function(){
             gainNode.gain.value = $("#oscillator-gain").val();
           });
+          
+          $("input[type='radio'][name='oscillator-gain']") // select the radio by its id
+            .change(function(){ // bind a function to the change event
+                if( $(this).is(":checked") ){ // check if the radio is checked
+                    var oscillator.type = $(this).val(); // retrieve the value
+                }
+            });
   }
   
  (function init(g){

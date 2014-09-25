@@ -24,11 +24,11 @@ var finalVol = 0;
           oscillator.frequency.value = freq;
           oscillator.start();
           gainNode.gain.value = $("#oscillator-gain").val();
+          
+            $("#oscillator-gain").change(function(){
+            gainNode.gain.value = $("#oscillator-gain").val();
+          });
   }
-  
-  $("#oscillator-gain").change(function(){
-    gainNode.gain.value = $("#oscillator-gain").val();
-  });
   
  (function init(g){
  	try{

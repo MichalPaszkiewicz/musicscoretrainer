@@ -20,7 +20,7 @@ var finalVol = 0;
           oscillator.connect(gainNode);
           gainNode.connect(audio_context.destination);
           
-          oscillator.type = "triangle";
+          oscillator.type = $("input[type='radio'][name='oscillator-type']:checked").val();
           oscillator.frequency.value = freq;
           oscillator.start();
           gainNode.gain.value = $("#oscillator-gain").val();

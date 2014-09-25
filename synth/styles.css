@@ -183,3 +183,8 @@ body.ui-overlay-a{
 .product:hover{
 	background: rgb(73, 72, 72);
 }
+
+.synth-container{
+	max-width:1000px;
+	margin:auto;
+}

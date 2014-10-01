@@ -1,5 +1,5 @@
 var audio_context, oscillator, gainNode, volController;
-
+var soundIssues = false;
 var initialVol = 0.8;
 var currentVol = initialVol;
 var finalVol = 0;

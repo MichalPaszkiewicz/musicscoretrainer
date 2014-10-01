@@ -4,8 +4,6 @@ var canvasSpeed = 800;
 var paused = false;
 var sharpsOn = false;
 
-var soundIssues = false;
-
 var lastNote = null;
 var lastNoteCorrect = true;
 

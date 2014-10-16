@@ -147,7 +147,7 @@ function updateScore()
   
 function playKey(key)
 {
-	if(liveNotes[i].octave < notes[liveNotes[i].note].octave)
+	if(liveNotes[0].octave < notes[liveNotes[0].note].octave)
 	{
 		lowerLastOctave = true;
 	}

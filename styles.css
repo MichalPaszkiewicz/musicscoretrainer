@@ -105,7 +105,7 @@
 	top: 20px;
 	font-size: 53px;
 	margin-top: 17px;
-	margin-left: 30px;
+	margin-left: 70px;
 	opacity: 0.2;
 	color: black;
 }
@@ -191,4 +191,5 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	position:absolute;
+	margin-left: 25px;
 }

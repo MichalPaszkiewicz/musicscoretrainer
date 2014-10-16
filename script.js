@@ -246,7 +246,7 @@ function addRandomNote()
 		}
 	}
 	
-	if(Math.random() > 0.6)
+	if(Math.random() > 0.6 && number > 2)
 	{
 		addNote(letter + "l");
 		return;

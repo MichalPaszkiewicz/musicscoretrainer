@@ -235,11 +235,6 @@ function addRandomNote()
 	var number = Math.floor( 7 * Math.random() );
 	var letter = String.fromCharCode(number + 97);
 	
-	if(Math.random() > 0.6)
-	{
-		addNote(letter + "l");
-	}
-	
 	if(sharpsOn)
 	{
 		if((letter != "e") && (letter != "b"))
@@ -249,6 +244,12 @@ function addRandomNote()
 				letter += "s";
 			}
 		}
+	}
+	
+	if(Math.random() > 0.6)
+	{
+		addNote(letter + "l");
+		return;
 	}
 	
 	addNote(letter);

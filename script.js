@@ -324,14 +324,14 @@ function drawLiveNotes()
 {
 	for(var i = 0; i < liveNotes.length; i++)
 	{
-		var y-axis = notes[liveNotes[i].note].y;
+		var yAxis = notes[liveNotes[i].note].y;
 		
 		if(liveNotes[i].octave < notes[liveNotes[i].note].octave)
 		{
-			y-axis = y-axis + notes.octave.y;	
+			yAxis = yAxis + notes.octave.y;	
 		}
 		
-		drawNote(ctx, liveNotes[i].x, y-axis, notes[liveNotes[i].note].sharp);
+		drawNote(ctx, liveNotes[i].x, yAxis, notes[liveNotes[i].note].sharp);
 	}
 	
 	if(lastNote != null){

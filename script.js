@@ -215,7 +215,13 @@ function updateOctave()
 
 function addNote(note)
 {
-	liveNotes.push({x : startPos, note : note, octave : notes[note].octave});
+	var octave = notes[note].octave;
+	if(note.indexOf("l") != -1)
+	{
+		note = note.replace("l","");
+		octave--;
+	}
+	liveNotes.push({x : startPos, note : note, octave : octave});
 	updateOctave();
 }
 
@@ -224,6 +230,11 @@ function addRandomNote()
 	
 	var number = Math.floor( 7 * Math.random() );
 	var letter = String.fromCharCode(number + 97);
+	
+	if(Math.random() > 0.6)
+	{
+		addNote(letter + "l");
+	}
 	
 	if(sharpsOn)
 	{
@@ -313,7 +324,14 @@ function drawLiveNotes()
 {
 	for(var i = 0; i < liveNotes.length; i++)
 	{
-		drawNote(ctx, liveNotes[i].x, notes[liveNotes[i].note].y, notes[liveNotes[i].note].sharp);
+		var y-axis = notes[liveNotes[i].note].y;
+		
+		if(liveNotes[i].octave < notes[liveNotes[i].note].octave)
+		{
+			y-axis = y-axis + notes.octave.y;	
+		}
+		
+		drawNote(ctx, liveNotes[i].x, y-axis, notes[liveNotes[i].note].sharp);
 	}
 	
 	if(lastNote != null){

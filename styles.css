@@ -183,3 +183,12 @@
 .product:hover{
 	background: rgb(73, 72, 72);
 }
+
+.clef{
+	background: url(http://www.clipartbest.com/cliparts/biy/Ed7/biyEd79iL.png) center -10px;
+	height: 125px;
+	width: 50px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position:absolute;
+}

@@ -102,8 +102,8 @@
 
 .scoreBoard{
 	position: absolute;
-	top: 20px;
-	font-size: 53px;
+	top: 38px;
+	font-size: 36px;
 	margin-top: 17px;
 	margin-left: 70px;
 	opacity: 0.2;
@@ -192,4 +192,5 @@
 	background-repeat: no-repeat;
 	position:absolute;
 	margin-left: 25px;
+	opacity: 0.3;
 }

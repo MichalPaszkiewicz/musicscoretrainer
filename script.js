@@ -6,6 +6,7 @@ var sharpsOn = false;
 
 var lastNote = null;
 var lastNoteCorrect = true;
+var lowerLastOctave = false;
 
 var score = 0;
 var missedNotes = 0;
@@ -146,6 +147,15 @@ function updateScore()
   
 function playKey(key)
 {
+	if(liveNotes[i].octave < notes[liveNotes[i].note].octave)
+	{
+		lowerLastOctave = true;
+	}
+	else
+	{
+		lowerLastOctave = false;
+	}
+	
 	var notePlayed = key.replace("#", "s");
 	
 	if(soundIssues == false){
@@ -317,11 +327,18 @@ function drawNote(ctx, x, y, isSharp, colour)
 
 function drawLastKeyedNote()
 {
+	var yAxis = notes[lastNote].y;
+	
+	if(lowerLastOctave)
+	{
+		yAxis = parseInt(yAxis) + parseInt(notes.octave.y);
+	}
+	
 	if(lastNoteCorrect){
-		drawNote(ctx, 25, notes[lastNote].y, notes[lastNote].sharp, "green");
+		drawNote(ctx, 25, yAxis, notes[lastNote].sharp, "green");
 	}
 	else{
-		drawNote(ctx, 25, notes[lastNote].y, notes[lastNote].sharp, "red");
+		drawNote(ctx, 25, yAxis, notes[lastNote].sharp, "red");
 	}
 }
 

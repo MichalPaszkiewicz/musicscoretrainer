@@ -215,11 +215,15 @@ function updateOctave()
 
 function addNote(note)
 {
-	var octave = notes[note].octave;
+	var octave = null;
 	if(note.indexOf("l") != -1)
 	{
 		note = note.replace("l","");
-		octave--;
+		octave = notes[note].octave - 1;
+	}
+	else
+	{
+		octave = notes[note].octave;
 	}
 	liveNotes.push({x : startPos, note : note, octave : octave});
 	updateOctave();

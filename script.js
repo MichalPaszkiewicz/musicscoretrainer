@@ -333,7 +333,7 @@ function drawLiveNotes()
 		
 		if(liveNotes[i].octave < notes[liveNotes[i].note].octave)
 		{
-			yAxis = yAxis + notes.octave.y;	
+			yAxis = parseInt(yAxis) + parseInt(notes.octave.y);
 		}
 		
 		drawNote(ctx, liveNotes[i].x, yAxis, notes[liveNotes[i].note].sharp);

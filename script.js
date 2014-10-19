@@ -164,7 +164,7 @@ function playKey(key)
 	if(soundIssues == false){
 		var currentFreq = notes[notePlayed].freq;
 		
-		if(!lowerLastOctave)
+		if(lowerLastOctave)
 		{
 			currentFreq = currentFreq / 2;
 		}

@@ -178,16 +178,26 @@
 	float: left;
 	border: 3px solid black;
 	border-radius: 15px;
-	height: 80px;
 	width: 80px;
 	margin: 10px;
 	padding: 10px;
 	box-sizing: border-box;
 	background: rgb(36, 35, 35);
+	padding-bottom: 30px;
+	overflow: hidden;
+	position: relative;
 }
 
 .product:hover{
 	background: rgb(73, 72, 72);
+}
+
+.product-cost{
+	background: red;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
 }
 
 .clef{

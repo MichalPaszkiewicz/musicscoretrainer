@@ -198,12 +198,34 @@ function playKey(key)
 
 function buy(product)
 {
-	if(product == "skip-level" && getCoins() >= 100)
+	if(product == "skip-level")
 	{
-		increaseLevel();
-		spendCoins(100);
-		displayLevel();
-		toggleShop();
+		if(getCoins() >= 100)
+		{
+			increaseLevel();
+			spendCoins(100);
+			displayLevel();
+			toggleShop();
+		}
+		else
+		{
+			alert("Not enough cash, m8!");
+		}
+	}
+	if(product == "bass-clef" && getCoins() >= 5000)
+	{
+		if(getCoins() >= 5000)
+		{
+			alert("Whoops, bass clef has not been implemented yet!");
+		}
+		else
+		{
+			alert("Not enough cash, m8!");
+		}
+	}
+	else
+	{
+		alert("Not implemented!");
 	}
 }
 

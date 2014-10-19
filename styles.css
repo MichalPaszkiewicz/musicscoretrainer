@@ -173,7 +173,7 @@
 }
 
 .product{
-	clear:both;
+	display: inline-block;
 	cursor: pointer;
 	float: left;
 	border: 3px solid black;

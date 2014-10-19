@@ -147,19 +147,29 @@ function updateScore()
   
 function playKey(key)
 {
-	if(liveNotes[0].octave < notes[liveNotes[0].note].octave)
+	if(liveNote.length > 0)
 	{
-		lowerLastOctave = true;
-	}
-	else
-	{
-		lowerLastOctave = false;
+		if(liveNotes[0].octave < notes[liveNotes[0].note].octave)
+		{
+			lowerLastOctave = true;
+		}
+		else
+		{
+			lowerLastOctave = false;
+		}
 	}
 	
 	var notePlayed = key.replace("#", "s");
 	
 	if(soundIssues == false){
-		playSound(notes[notePlayed].freq);
+		var currentFreq = notes[notePlayed].freq;
+		
+		if(!lowerLastOctave)
+		{
+			currentFreq = currentFreq / 2;
+		}
+		
+		playSound(currentFreq);
 	}
 	
 	if(notePlayed == liveNotes[0].note)

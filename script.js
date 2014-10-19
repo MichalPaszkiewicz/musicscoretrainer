@@ -212,7 +212,7 @@ function buy(product)
 			alert("Not enough cash, m8!");
 		}
 	}
-	if(product == "bass-clef")
+	else if(product == "bass-clef")
 	{
 		if(getCoins() >= 5000)
 		{

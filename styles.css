@@ -125,7 +125,7 @@
 	left: 0;
 	bottom: 0;
 	right: 0;
-	height: 260px;
+	height: 280px;
 	width: 90%;
 	max-width: 600px;
 	background: black;
@@ -140,7 +140,11 @@
 }
 
 .facebook-container{
-	background: white;
+	padding: 5px;
+	border-radius: 6px;
+	background: #C6CDE4;
+	border: #ddd 1px solid;
+	margin-top: 30px;
 }
 
 .shop{

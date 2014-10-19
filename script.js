@@ -124,6 +124,9 @@ function toggleMenu()
 
 function toggleShop()
 {
+	$(".product").filter( function(index){ return parseInt($(this).find(".product-cost").text()) <= parseInt($(".shop .coins").text())} ).addClass("can-buy");
+	$(".product").filter( function(index){ return parseInt($(this).find(".product-cost").text()) > parseInt($(".shop .coins").text())} ).removeClass("can-buy");
+	
 	$(".shop").toggleClass("hidden");
 }
 

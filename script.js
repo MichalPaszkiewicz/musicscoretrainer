@@ -172,18 +172,21 @@ function playKey(key)
 		playSound(currentFreq);
 	}
 	
-	if(notePlayed == liveNotes[0].note)
+	if(liveNotes.length > 0)
 	{
-		liveNotes.shift();
-		score++;
-		updateOctave();
-		updateScore();
-		increaseCoins();
-		lastNoteCorrect = true;
-	}
-	else
-	{
-		lastNoteCorrect = false;
+		if(notePlayed == liveNotes[0].note)
+		{
+			liveNotes.shift();
+			score++;
+			updateOctave();
+			updateScore();
+			increaseCoins();
+			lastNoteCorrect = true;
+		}
+		else
+		{
+			lastNoteCorrect = false;
+		}
 	}
 	
 	lastNote = notePlayed;

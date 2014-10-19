@@ -200,6 +200,10 @@
 	width: 100%;
 }
 
+.shop .can-buy .product-cost{
+	background: green;
+}
+
 .clef{
 	background: url(http://www.clipartbest.com/cliparts/biy/Ed7/biyEd79iL.png) center -10px;
 	height: 125px;

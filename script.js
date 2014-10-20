@@ -235,19 +235,40 @@ var notes = function(value){
 	return this[value];
 };
 
-notes.gs = {y : "13", octave : 4, sharp : true, freq : 830.61};
-notes.g = {y : "13", octave : 4, sharp : false, freq : 783.99};
-notes.fs = {y : "20", octave : 4, sharp : true, freq : 739.99};
-notes.f = {y : "20", octave : 4, sharp : false, freq : 698.46};
-notes.e = {y : "27", octave : 4, sharp : false, freq : 659.25};
-notes.ds = {y : "34", octave : 4, sharp : true, freq : 622.25};
-notes.d = {y : "34", octave : 4, sharp : false, freq : 587.33};
-notes.cs = {y : "41", octave : 4, sharp : true, freq : 554.37};
-notes.c = {y : "41", octave : 4, sharp : false, freq : 523.25};
-notes.b = {y : "48", octave : 3, sharp : false, freq : 493.88};
-notes.as = {y : "55", octave : 3, sharp : true, freq : 466.16};
-notes.a = {y : "55", octave : 3, sharp : false, freq : 440};
-notes.octave = {y : "49"};
+//note: g octave 4 here is actually g5
+function setTreble(){
+	notes.gs = {y : "13", octave : 4, sharp : true, freq : 830.61};
+	notes.g = {y : "13", octave : 4, sharp : false, freq : 783.99};
+	notes.fs = {y : "20", octave : 4, sharp : true, freq : 739.99};
+	notes.f = {y : "20", octave : 4, sharp : false, freq : 698.46};
+	notes.e = {y : "27", octave : 4, sharp : false, freq : 659.25};
+	notes.ds = {y : "34", octave : 4, sharp : true, freq : 622.25};
+	notes.d = {y : "34", octave : 4, sharp : false, freq : 587.33};
+	notes.cs = {y : "41", octave : 4, sharp : true, freq : 554.37};
+	notes.c = {y : "41", octave : 4, sharp : false, freq : 523.25};
+	notes.b = {y : "48", octave : 3, sharp : false, freq : 493.88};
+	notes.as = {y : "55", octave : 3, sharp : true, freq : 466.16};
+	notes.a = {y : "55", octave : 3, sharp : false, freq : 440};
+	notes.octave = {y : "49"};
+}
+
+setTreble();
+
+function setBass(){
+	notes.b = {y : "13", octave : 2, sharp : false, freq : 246.94};
+	notes.as = {y : "20", octave : 2, sharp : true, freq : 233.08};
+	notes.a = {y : "20", octave : 2, sharp : false, freq : 220.00};
+	notes.gs = {y : "27", octave : 2, sharp : true, freq : 207.65};
+	notes.g = {y : "27", octave : 2, sharp : false, freq : 196.00};
+	notes.fs = {y : "34", octave : 2, sharp : true, freq : 185.00};
+	notes.f = {y : "34", octave : 2, sharp : false, freq : 174.61};
+	notes.e = {y : "41", octave : 2, sharp : false, freq : 164.81};
+	notes.ds = {y : "48", octave : 2, sharp : true, freq : 155.56};
+	notes.d = {y : "48", octave : 2, sharp : false, freq : 146.83};
+	notes.cs = {y : "55", octave : 2, sharp : true, freq : 138.59};
+	notes.c = {y : "55", octave : 2, sharp : false, freq : 130.81};
+	notes.octave = {y : "49"};
+}
 
 var liveNotes = [];
 addRandomNote();

@@ -4,6 +4,8 @@ var canvasSpeed = 800;
 var paused = false;
 var sharpsOn = false;
 
+var gameSettings = {};
+
 var lastNote = null;
 var lastNoteCorrect = true;
 var lowerLastOctave = false;
@@ -67,6 +69,29 @@ function increaseLevel()
 {
 	var level = getLevel();
 	localStorage.setItem("musicscoretrainer-level", parseInt(level) + 1);
+}
+
+function setSettings()
+{
+	localStorage.setItem("musicscoretrainer-settings", JSON.stringify(GameSettings)); 
+}
+
+function getSettings()
+{
+	gameSettings = JSON.parse(localStorage.getItem("musicscoretrainer-settings"));
+	
+	if(gameSettings == null)
+	{
+		gameSettings = {};
+		gameSettings.hasBassClef = false;
+		gameSettings.hasSynth = false;
+		setSettings();
+		return gameSettings;
+	}
+	else
+	{
+		return gameSettings;
+	}
 }
 
 function setLevel()

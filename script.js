@@ -73,7 +73,7 @@ function increaseLevel()
 
 function setSettings()
 {
-	localStorage.setItem("musicscoretrainer-settings", JSON.stringify(GameSettings)); 
+	localStorage.setItem("musicscoretrainer-settings", JSON.stringify(gameSettings)); 
 }
 
 function getSettings()
@@ -93,6 +93,30 @@ function getSettings()
 		return gameSettings;
 	}
 }
+
+function clefButtonUpdate()
+{
+	if(getSettings().hasBassClef)
+	{
+		$(".switch-clef").removeClass("hidden");
+	}
+}
+
+function synthButtonUpdate()
+{
+	if(getSettings().hasSynth)
+	{
+		$(".synth-button").removeClass("hidden");
+	}
+}
+
+function startButtonDisplay()
+{
+	clefButtonUpdate();
+	synthButtonUpdate();
+}
+
+startButtonDisplay();
 
 function setLevel()
 {
@@ -241,7 +265,10 @@ function buy(product)
 	{
 		if(getCoins() >= 5000)
 		{
-			alert("Whoops, bass clef has not been implemented yet!");
+			gameSettings.hasBassClef = true;
+			spendCoins(5000);
+			setSettings();
+			clefButtonUpdate();
 		}
 		else
 		{

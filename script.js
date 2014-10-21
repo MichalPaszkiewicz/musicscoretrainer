@@ -85,6 +85,7 @@ function getSettings()
 		gameSettings = {};
 		gameSettings.hasBassClef = false;
 		gameSettings.hasSynth = false;
+		gameSettings.currentClef = "treble";
 		setSettings();
 		return gameSettings;
 	}

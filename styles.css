@@ -160,7 +160,7 @@
 	width: 100%;
 }
 
-.level, .coins{
+.level, .coins, .current-clef{
 	display: inline-block;
 }
 

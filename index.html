@@ -23,7 +23,7 @@
 			<div class="info-line">You are on level: <div class="level">1</div></div>
 			<div class="info-line">Clef: <div class="current-clef">Treble</div></div>
 			<button onclick="runGame(); toggleMenu();">Start next level!</button>
-			<button class="switch-clef hidden">Switch clef</button>
+			<button class="switch-clef hidden" onclick="switchClef();">Switch clef</button>
 			<button class="synth-button hidden">Change synth</button>
 			<button onclick="factoryReset();">Reset game</button>
 			<div class="info-line">Coins: <div class="coins">0</div></div>
@@ -43,8 +43,8 @@
 				<div class="product" id="skip-level" title="Cost: 100">Skip level
 					<div class="product-cost">100</div>
 				</div>
-				<div class="product" id="bass-clef" title="Cost: 5000">Bass clef
-					<div class="product-cost">5000</div>
+				<div class="product" id="bass-clef" title="Cost: 500">Bass clef
+					<div class="product-cost">500</div>
 				</div>
 			</div>
 			<button onclick="toggleShop();">Close</button>

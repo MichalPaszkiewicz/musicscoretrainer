@@ -292,7 +292,6 @@ function buy(product)
 			alert("You already have this item!");
 			return;
 		}
-		}
 		if(getCoins() >= 2000)
 		{
 			gameSettings.hasSynth = true;

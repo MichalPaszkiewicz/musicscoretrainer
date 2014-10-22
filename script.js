@@ -416,7 +416,7 @@ function addRandomNote()
 	}
 	else if(fetchClef == "bass")
 	{
-		canBeLowered = true;
+		canBeLowered = number > 4;
 	}
 	else
 	{

@@ -160,7 +160,7 @@
 	width: 100%;
 }
 
-.level, .coins, .current-clef{
+.level, .coins, .current-clef, .current-game-mode{
 	display: inline-block;
 }
 

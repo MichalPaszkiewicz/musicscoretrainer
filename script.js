@@ -272,6 +272,8 @@ function buy(product)
 			spendCoins(400);
 			setSettings();
 			clefButtonUpdate();
+			displayLevel();
+			toggleShop();
 		}
 		else
 		{
@@ -285,6 +287,8 @@ function buy(product)
 			gameSettings.hasSynth = true;
 			spendCoins(2000);
 			setSettings();
+			displayLevel();
+			toggleShop();
 		}
 		else
 		{
@@ -299,6 +303,8 @@ function buy(product)
 			spendCoins(1000);
 			setSettings();
 			alert("Soz m8, there aint any real tunes yet, but w8 up, dey'll be here soon");
+			displayLevel();
+			toggleShop();
 		}
 		else
 		{

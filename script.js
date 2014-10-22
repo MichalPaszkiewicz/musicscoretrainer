@@ -1,3 +1,14 @@
+//note: 144 is length of crotchet (2^4 x 3^2)
+var tunes = [];
+var londonBridge = [{v:"d", o:"4",l:144},{v:"e", o:"4",l:144},{v:"d", o:"4",l:144},{v:"c", o:"4",l:144},
+		{v:"b", o:"3",l:144},{v:"c", o:"4",l:144},{v:"c", o:"4",l:288},
+		{v:"a", o:"3",l:288},{v:"b", o:"3",l:288},{v:"c", o:"4",l:288},
+		{v:"b", o:"3",l:144},{v:"c", o:"4",l:144},{v:"c", o:"4",l:288},
+		{v:"d", o:"4",l:144},{v:"e", o:"4",l:144},{v:"d", o:"4",l:144},{v:"c", o:"4",l:144},
+		{v:"b", o:"3",l:144},{v:"c", o:"4",l:144},{v:"c", o:"4",l:288},
+		{v:"a", o:"3",l:288},{v:"d", o:"4",l:288},{v:"b", o:"3",l:144},{v:"g", o:"3",l:144}];
+tunes.push(londonBridge);
+
 var noteCountDownInit = 200;
 var noteCountDown = noteCountDownInit;
 var canvasSpeed = 800;

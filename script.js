@@ -17,7 +17,7 @@ var updateRate = 10;
  $("#keyboard .key").click(function(){ playKey(this.id); });
  $(".product").click(function(){ buy(this.id); });
 
-$(".game-container").html("<canvas id='canvas' height=100 width=" + $(this).innerWidth() + "></canvas>");
+$(".game-container").html("<canvas id='canvas' height=120 width=" + $(this).innerWidth() + "></canvas>");
 var ctx = document.getElementById('canvas').getContext('2d');
 ctx.globalAlpha = 0.9;
 

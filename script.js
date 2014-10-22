@@ -182,6 +182,11 @@ function toggleShop()
 	$(".shop").toggleClass("hidden");
 }
 
+function toggleSynth()
+{
+	alert("Not implemented!");
+}
+
 function resetScore()
 {
 	score = 0;
@@ -412,6 +417,11 @@ function switchClef()
 	{
 		setTreble();
 	}
+}
+
+function switchMode()
+{
+	alert("Not implemented yet!");
 }
 
 setCurrentClef();

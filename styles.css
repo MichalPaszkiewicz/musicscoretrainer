@@ -216,5 +216,7 @@
 }
 
 .clef.bass{
-	background: url(http://www.iconsdb.com/icons/download/black/bass-clef-512.png) center -10px;
+	background: url(http://www.iconsdb.com/icons/download/black/bass-clef-512.png) center 21px;
+	background-size: 48px;
+	background-repeat: no-repeat;
 }

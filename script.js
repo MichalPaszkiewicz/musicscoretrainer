@@ -86,6 +86,7 @@ function getSettings()
 		gameSettings = {};
 		gameSettings.hasBassClef = false;
 		gameSettings.hasSynth = false;
+		gameSettings.hasRealTunes = false;
 		gameSettings.currentClef = "treble";
 		setSettings();
 		return gameSettings;
@@ -288,6 +289,20 @@ function buy(product)
 		else
 		{
 			alert("Not enough cash, m8");
+		}
+	}
+	else if(product == "real-tunes")
+	{
+		if(getCoins() >= 1000)
+		{
+			gameSettings.hasRealTunes = true;
+			spendCoins(1000);
+			setSettings();
+			alert("Soz m8, there aint any real tunes yet, but w8 up, dey'll be here soon");
+		}
+		else
+		{
+			alert("Where's the dough, m8?");
 		}
 	}
 	else

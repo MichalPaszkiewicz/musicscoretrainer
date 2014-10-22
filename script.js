@@ -276,6 +276,19 @@ function buy(product)
 			alert("Not enough cash, m8!");
 		}
 	}
+	else if(product == "synth")
+	{
+		if(getCoins() >= 2000)
+		{
+			gameSettings.hasSynth = true;
+			spendCoins(2000);
+			setSettings();
+		}
+		else
+		{
+			alert("Not enough cash, m8");
+		}
+	}
 	else
 	{
 		alert("Not implemented!");

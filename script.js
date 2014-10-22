@@ -264,10 +264,10 @@ function buy(product)
 	}
 	else if(product == "bass-clef")
 	{
-		if(getCoins() >= 5000)
+		if(getCoins() >= 400)
 		{
 			gameSettings.hasBassClef = true;
-			spendCoins(5000);
+			spendCoins(400);
 			setSettings();
 			clefButtonUpdate();
 		}
@@ -290,6 +290,8 @@ var notes = function(value){
 
 //note: g octave 4 here is actually g5
 function setTreble(){
+	gameSettings.currentClef = "treble";
+	setSettings();
 	notes.gs = {y : "13", octave : 4, sharp : true, freq : 830.61};
 	notes.g = {y : "13", octave : 4, sharp : false, freq : 783.99};
 	notes.fs = {y : "20", octave : 4, sharp : true, freq : 739.99};
@@ -305,9 +307,9 @@ function setTreble(){
 	notes.octave = {y : "49"};
 }
 
-setTreble();
-
 function setBass(){
+	gameSettings.currentClef = "bass";
+	setSettings();
 	notes.b = {y : "13", octave : 2, sharp : false, freq : 246.94};
 	notes.as = {y : "20", octave : 2, sharp : true, freq : 233.08};
 	notes.a = {y : "20", octave : 2, sharp : false, freq : 220.00};
@@ -322,6 +324,43 @@ function setBass(){
 	notes.c = {y : "55", octave : 2, sharp : false, freq : 130.81};
 	notes.octave = {y : "49"};
 }
+
+function setCurrentClef(){
+	var fetchClef = getSettings().currentClef;
+	
+	if(fetchClef == "treble")
+	{
+		setTreble();
+	}
+	else if(fetchClef == "bass")
+	{
+		setBass();
+	}
+	else
+	{
+		setTreble();
+	}
+}
+
+function switchClef()
+{
+	var fetchClef = getSettings().currentClef;
+	
+	if(fetchClef == "treble")
+	{
+		setBass();
+	}
+	else if(fetchClef == "bass")
+	{
+		setTreble();
+	}
+	else
+	{
+		setTreble();
+	}
+}
+
+setCurrentClef();
 
 var liveNotes = [];
 addRandomNote();
@@ -368,7 +407,23 @@ function addRandomNote()
 		}
 	}
 	
-	if(Math.random() > 0.6 && number > 2)
+	var canBeLowered = false;
+	var fetchClef = getSettings().currentClef;
+	
+	if(fetchClef == "treble")
+	{
+		canBeLowered = number > 2;
+	}
+	else if(fetchClef == "bass")
+	{
+		canBeLowered = true;
+	}
+	else
+	{
+		canBeLowered = false;
+	}
+	
+	if(Math.random() > 0.6 && canBeLowered)
 	{
 		addNote(letter + "l");
 		return;

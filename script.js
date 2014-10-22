@@ -3,6 +3,7 @@ var noteCountDown = noteCountDownInit;
 var canvasSpeed = 800;
 var paused = false;
 var sharpsOn = false;
+var steadyMode = false;
 
 var gameSettings = {};
 
@@ -568,7 +569,7 @@ function updateLiveNotes()
 		
 		noteCountDown = noteCountDownInit;
 		
-		if(noteCountDownInit > 20)
+		if(noteCountDownInit > 20 && !steadyMode)
 		{
 			noteCountDownInit--;
 		}

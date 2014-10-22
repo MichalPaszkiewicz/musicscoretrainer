@@ -266,6 +266,11 @@ function buy(product)
 	}
 	else if(product == "bass-clef")
 	{
+		if(getSettings().hasBassClef == true)
+		{
+			alert("You already have this item!");
+			return;
+		}
 		if(getCoins() >= 400)
 		{
 			gameSettings.hasBassClef = true;
@@ -282,6 +287,12 @@ function buy(product)
 	}
 	else if(product == "synth")
 	{
+		if(getSettings().hasSynth == true)
+		{
+			alert("You already have this item!");
+			return;
+		}
+		}
 		if(getCoins() >= 2000)
 		{
 			gameSettings.hasSynth = true;
@@ -297,6 +308,11 @@ function buy(product)
 	}
 	else if(product == "real-tunes")
 	{
+		if(getSettings().hasRealTunes == true)
+		{
+			alert("You already have this item!");
+			return;
+		}
 		if(getCoins() >= 1000)
 		{
 			gameSettings.hasRealTunes = true;

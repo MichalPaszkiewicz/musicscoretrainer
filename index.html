@@ -24,8 +24,9 @@
 			<div class="info-line">Clef: <div class="current-clef">Treble</div></div>
 			<div class="info-lint">Mode: <div class="current-game-mode">Random notes</div></div>
 			<button onclick="runGame(); toggleMenu();">Start next level!</button>
+			<button class="switch-mode hidden" onclick="switchMode();">Switch game mode</button>
 			<button class="switch-clef hidden" onclick="switchClef();">Switch clef</button>
-			<button class="synth-button hidden">Change synth</button>
+			<button class="synth-button hidden" onclick="toggleSynth();">Change synth</button>
 			<div class="info-line">Coins: <div class="coins">0</div></div>
 			<button onclick="toggleShop();">Shop</button>
 			<button onclick="factoryReset();">Reset game</button>

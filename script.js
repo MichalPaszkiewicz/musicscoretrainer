@@ -292,6 +292,7 @@ var notes = function(value){
 function setTreble(){
 	gameSettings.currentClef = "treble";
 	setSettings();
+	$(".current-clef").text("Treble");
 	notes.gs = {y : "13", octave : 4, sharp : true, freq : 830.61};
 	notes.g = {y : "13", octave : 4, sharp : false, freq : 783.99};
 	notes.fs = {y : "20", octave : 4, sharp : true, freq : 739.99};
@@ -310,6 +311,7 @@ function setTreble(){
 function setBass(){
 	gameSettings.currentClef = "bass";
 	setSettings();
+	$(".current-clef").text("Bass");
 	notes.b = {y : "13", octave : 2, sharp : false, freq : 246.94};
 	notes.as = {y : "20", octave : 2, sharp : true, freq : 233.08};
 	notes.a = {y : "20", octave : 2, sharp : false, freq : 220.00};

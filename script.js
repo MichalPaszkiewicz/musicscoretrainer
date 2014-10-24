@@ -296,10 +296,10 @@ function buy(product)
 			alert("You already have this item!");
 			return;
 		}
-		if(getCoins() >= 400)
+		if(getCoins() >= 300)
 		{
 			gameSettings.hasBassClef = true;
-			spendCoins(400);
+			spendCoins(300);
 			setSettings();
 			clefButtonUpdate();
 			displayLevel();

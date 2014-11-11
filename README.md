@@ -10,3 +10,7 @@ http://www.michalpaszkiewicz.co.uk/musicscoretrainer/
 Update: 11/11/2014
 -------------------
 Has both treble and bass clef!
+
+Init
+-------------------
+Keeps a score, allows levelling up and increasing difficulty with levels. works on mobile and desktop.

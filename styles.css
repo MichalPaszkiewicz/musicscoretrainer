@@ -206,7 +206,7 @@
 }
 
 .clef{
-	background: url(http://www.clipartbest.com/cliparts/biy/Ed7/biyEd79iL.png) center -10px;
+	background: url(treble-clef.png) center -10px;
 	height: 125px;
 	width: 50px;
 	background-size: cover;
@@ -217,7 +217,7 @@
 }
 
 .clef.bass{
-	background: url(http://www.iconsdb.com/icons/download/black/bass-clef-512.png) center 21px;
+	background: url(bass-clef.png) center 21px;
 	background-size: 48px;
 	background-repeat: no-repeat;
 }

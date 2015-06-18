@@ -9,7 +9,7 @@ var finalVol = 0;
     currentVol = initialVol;
     
     //oscillator.noteOff(0);
-    gainNode.disconnect(audio_context.destination);
+    gainNode.disconnect();
   }
 
   function playSound(freq) {

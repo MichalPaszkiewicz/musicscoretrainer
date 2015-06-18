@@ -7,6 +7,10 @@ Play this game in your browser and learn how to read music off a stave and play 
 
 http://www.michalpaszkiewicz.co.uk/musicscoretrainer/
 
+Update: 18/06/2015
+-------------------
+Fixing issues due to API change
+
 Update: 11/11/2014
 -------------------
 Has both treble and bass clef!

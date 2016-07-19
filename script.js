@@ -737,7 +737,7 @@ var keyboardMap = [
 
 function playNoteFromKeyboard(e){
 	var noteVal = keyboardMap.filter(function(km){ return km.keyCode == e.keyCode; });
-	playKey(noteVal.note);
+	playKey(noteVal[0].note);
 }
 
 document.body.onkeydown = playNoteFromKeyboard;

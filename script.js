@@ -719,3 +719,25 @@ function togglePause()
 	
 	paused = !paused;
 }
+
+var keyboardMap = [
+{keyCode:65,note:""},
+{keyCode:87,note:""},
+{keyCode:83,note:""},
+{keyCode:69,note:""},
+{keyCode:68,note:""},
+{keyCode:70,note:""},
+{keyCode:84,note:""},
+{keyCode:71,note:""},
+{keyCode:89,note:""},
+{keyCode:72,note:""},
+{keyCode:85,note:""},
+{keyCode:74,note:""}
+]
+
+function playNoteFromKeyboard(e){
+	var noteVal = keyBoardMap.filter(function(km){ return km.keyCode == e.keyCode; });
+	playKey(noteVal);
+}
+
+document.body.onkeydown = function(e){playKey(e.keyCode);};

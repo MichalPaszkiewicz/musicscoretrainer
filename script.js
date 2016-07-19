@@ -721,18 +721,18 @@ function togglePause()
 }
 
 var keyboardMap = [
-{keyCode:65,note:"C"},
-{keyCode:87,note:"C#"},
-{keyCode:83,note:"D"},
-{keyCode:69,note:"D#"},
-{keyCode:68,note:"E"},
-{keyCode:70,note:"F"},
-{keyCode:84,note:"F#"},
-{keyCode:71,note:"G"},
-{keyCode:89,note:"G#"},
-{keyCode:72,note:"A"},
-{keyCode:85,note:"A#"},
-{keyCode:74,note:"B"}
+{keyCode:65,note:"c"},
+{keyCode:87,note:"c#"},
+{keyCode:83,note:"d"},
+{keyCode:69,note:"d#"},
+{keyCode:68,note:"e"},
+{keyCode:70,note:"f"},
+{keyCode:84,note:"f#"},
+{keyCode:71,note:"g"},
+{keyCode:89,note:"g#"},
+{keyCode:72,note:"a"},
+{keyCode:85,note:"a#"},
+{keyCode:74,note:"b"}
 ]
 
 function playNoteFromKeyboard(e){

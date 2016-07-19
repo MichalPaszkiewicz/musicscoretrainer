@@ -721,23 +721,23 @@ function togglePause()
 }
 
 var keyboardMap = [
-{keyCode:65,note:""},
-{keyCode:87,note:""},
-{keyCode:83,note:""},
-{keyCode:69,note:""},
-{keyCode:68,note:""},
-{keyCode:70,note:""},
-{keyCode:84,note:""},
-{keyCode:71,note:""},
-{keyCode:89,note:""},
-{keyCode:72,note:""},
-{keyCode:85,note:""},
-{keyCode:74,note:""}
+{keyCode:65,note:"C"},
+{keyCode:87,note:"C#"},
+{keyCode:83,note:"D"},
+{keyCode:69,note:"D#"},
+{keyCode:68,note:"E"},
+{keyCode:70,note:"F"},
+{keyCode:84,note:"F#"},
+{keyCode:71,note:"G"},
+{keyCode:89,note:"G#"},
+{keyCode:72,note:"A"},
+{keyCode:85,note:"A#"},
+{keyCode:74,note:"B"}
 ]
 
 function playNoteFromKeyboard(e){
 	var noteVal = keyboardMap.filter(function(km){ return km.keyCode == e.keyCode; });
-	playKey(noteVal);
+	playKey(noteVal.note);
 }
 
 document.body.onkeydown = playNoteFromKeyboard;

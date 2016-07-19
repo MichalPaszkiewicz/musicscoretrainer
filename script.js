@@ -740,4 +740,4 @@ function playNoteFromKeyboard(e){
 	playKey(noteVal);
 }
 
-document.body.onkeydown = function(e){playKey(e.keyCode);};
+document.body.onkeydown = playNoteFromKeyboard;
